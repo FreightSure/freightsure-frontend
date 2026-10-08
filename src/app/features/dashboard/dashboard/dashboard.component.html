@@ -1,0 +1,307 @@
+<div class="dashboard">
+
+  <!-- Header -->
+  <div class="dash-header">
+    <div>
+      <h1 class="dash-title">📊 Dashboard</h1>
+      <p class="dash-subtitle">{{ currentDate }}</p>
+    </div>
+    <div class="header-actions">
+      <button class="btn-export" (click)="exportMissions()">📄 CSV</button>
+      <button class="btn-export" style="background:#fef3c7;color:#92400e;border-color:#fde68a" (click)="exportPdf()">📋 PDF Report</button>
+    </div>
+  </div>
+
+  @if (isLoading) {
+    <div class="loading-state">
+      <div class="spinner"></div>
+      <p>Loading dashboard data...</p>
+    </div>
+  }
+
+  @if (!isLoading && stats) {
+
+  <!-- KPI Cards -->
+  <div class="kpi-grid">
+    <div class="kpi-card kpi-users">
+      <div class="kpi-icon">👥</div>
+      <div class="kpi-content">
+        <div class="kpi-number">{{ stats.totalUsers }}</div>
+        <div class="kpi-label">Total Users</div>
+      </div>
+    </div>
+    <div class="kpi-card kpi-employees">
+      <div class="kpi-icon">🧑‍💼</div>
+      <div class="kpi-content">
+        <div class="kpi-number">{{ stats.totalEmployees }}</div>
+        <div class="kpi-label">Employees</div>
+      </div>
+    </div>
+    <div class="kpi-card kpi-vehicles">
+      <div class="kpi-icon">🚛</div>
+      <div class="kpi-content">
+        <div class="kpi-number">{{ stats.totalVehicles }}</div>
+        <div class="kpi-label">Vehicles</div>
+      </div>
+    </div>
+    <div class="kpi-card kpi-missions">
+      <div class="kpi-icon">📋</div>
+      <div class="kpi-content">
+        <div class="kpi-number">{{ stats.totalMissions }}</div>
+        <div class="kpi-label">Missions</div>
+      </div>
+    </div>
+    <div class="kpi-card kpi-deliveries">
+      <div class="kpi-icon">📦</div>
+      <div class="kpi-content">
+        <div class="kpi-number">{{ stats.totalDeliveries }}</div>
+        <div class="kpi-label">Deliveries</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Charts Row -->
+  <div class="charts-grid">
+
+    <!-- Vehicle Status Bar Chart -->
+    <div class="chart-card">
+      <div class="chart-header">
+        <h3>🚛 Fleet Status</h3>
+        <span class="chart-total">{{ stats.totalVehicles }} vehicles</span>
+      </div>
+      <div class="bar-chart">
+        <div class="bar-item">
+          <div class="bar-label"><span class="dot dot-green"></span> Available</div>
+          <div class="bar-track">
+            <div class="bar-fill bar-green" [style.width.%]="pct(stats.availableVehicles, stats.totalVehicles)"></div>
+          </div>
+          <div class="bar-value">{{ stats.availableVehicles }}</div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-label"><span class="dot dot-blue"></span> On Mission</div>
+          <div class="bar-track">
+            <div class="bar-fill bar-blue" [style.width.%]="pct(stats.onMissionVehicles, stats.totalVehicles)"></div>
+          </div>
+          <div class="bar-value">{{ stats.onMissionVehicles }}</div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-label"><span class="dot dot-orange"></span> Maintenance</div>
+          <div class="bar-track">
+            <div class="bar-fill bar-orange" [style.width.%]="pct(stats.maintenanceVehicles, stats.totalVehicles)"></div>
+          </div>
+          <div class="bar-value">{{ stats.maintenanceVehicles }}</div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-label"><span class="dot dot-red"></span> Out of Service</div>
+          <div class="bar-track">
+            <div class="bar-fill bar-red" [style.width.%]="pct(stats.outOfServiceVehicles, stats.totalVehicles)"></div>
+          </div>
+          <div class="bar-value">{{ stats.outOfServiceVehicles }}</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mission Status Donut Chart (SVG with [attr.] binding) -->
+    <div class="chart-card">
+      <div class="chart-header">
+        <h3>📋 Mission Status</h3>
+        <span class="chart-total">{{ stats.totalMissions }} missions</span>
+      </div>
+      <div class="donut-wrapper">
+        <svg viewBox="0 0 120 120" class="donut-svg">
+          <circle cx="60" cy="60" r="45" fill="none" stroke="#e5e7eb" stroke-width="20"/>
+
+          <!-- Pending — yellow -->
+          <circle cx="60" cy="60" r="45" fill="none" stroke="#f59e0b" stroke-width="20"
+            [attr.stroke-dasharray]="donutDash(stats.pendingMissions, stats.totalMissions)"
+            stroke-dashoffset="0"
+            transform="rotate(-90 60 60)"/>
+
+          <!-- In Progress — blue -->
+          <circle cx="60" cy="60" r="45" fill="none" stroke="#3b82f6" stroke-width="20"
+            [attr.stroke-dasharray]="donutDash(stats.inProgressMissions, stats.totalMissions)"
+            [attr.stroke-dashoffset]="donutOffset([pct(stats.pendingMissions, stats.totalMissions)])"
+            transform="rotate(-90 60 60)"/>
+
+          <!-- Completed — green -->
+          <circle cx="60" cy="60" r="45" fill="none" stroke="#10b981" stroke-width="20"
+            [attr.stroke-dasharray]="donutDash(stats.completedMissions, stats.totalMissions)"
+            [attr.stroke-dashoffset]="donutOffset([pct(stats.pendingMissions, stats.totalMissions), pct(stats.inProgressMissions, stats.totalMissions)])"
+            transform="rotate(-90 60 60)"/>
+
+          <text x="60" y="58" text-anchor="middle" font-size="18" font-weight="bold" fill="#1f2937">{{ stats.totalMissions }}</text>
+          <text x="60" y="72" text-anchor="middle" font-size="9" fill="#6b7280">missions</text>
+        </svg>
+        <div class="donut-legend">
+          <div class="legend-item"><span class="dot dot-yellow"></span> Pending ({{ stats.pendingMissions }})</div>
+          <div class="legend-item"><span class="dot dot-blue"></span> In Progress ({{ stats.inProgressMissions }})</div>
+          <div class="legend-item"><span class="dot dot-green"></span> Completed ({{ stats.completedMissions }})</div>
+          <div class="legend-item"><span class="dot dot-red"></span> Cancelled ({{ stats.cancelledMissions }})</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Employee & Delivery Status -->
+    <div class="chart-card">
+      <div class="chart-header">
+        <h3>👥 Team & Deliveries</h3>
+      </div>
+      <div class="bar-chart">
+        <div class="section-label">Employees</div>
+        <div class="bar-item">
+          <div class="bar-label"><span class="dot dot-green"></span> Active</div>
+          <div class="bar-track">
+            <div class="bar-fill bar-green" [style.width.%]="pct(stats.activeEmployees, stats.totalEmployees)"></div>
+          </div>
+          <div class="bar-value">{{ stats.activeEmployees }}</div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-label"><span class="dot dot-blue"></span> On Mission</div>
+          <div class="bar-track">
+            <div class="bar-fill bar-blue" [style.width.%]="pct(stats.onMissionEmployees, stats.totalEmployees)"></div>
+          </div>
+          <div class="bar-value">{{ stats.onMissionEmployees }}</div>
+        </div>
+        <div class="section-label" style="margin-top: 12px;">Deliveries</div>
+        <div class="bar-item">
+          <div class="bar-label"><span class="dot dot-yellow"></span> Pending</div>
+          <div class="bar-track">
+            <div class="bar-fill bar-yellow" [style.width.%]="pct(stats.pendingDeliveries, stats.totalDeliveries)"></div>
+          </div>
+          <div class="bar-value">{{ stats.pendingDeliveries }}</div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-label"><span class="dot dot-green"></span> Delivered</div>
+          <div class="bar-track">
+            <div class="bar-fill bar-green" [style.width.%]="pct(stats.deliveredDeliveries, stats.totalDeliveries)"></div>
+          </div>
+          <div class="bar-value">{{ stats.deliveredDeliveries }}</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Monthly Trend Charts -->
+  <div class="charts-grid charts-grid-2">
+
+    <!-- Missions by Month -->
+    <div class="chart-card">
+      <div class="chart-header">
+        <h3>📋 Missions — Last 6 Months</h3>
+        <span class="chart-total">{{ stats.totalMissions }} total</span>
+      </div>
+      @if (stats.missionsByMonth && stats.missionsByMonth.length > 0) {
+        <div class="monthly-chart">
+          <svg [attr.viewBox]="'0 0 ' + chartWidth + ' ' + (chartHeight + 30)" class="monthly-svg">
+            @for (item of stats.missionsByMonth; track item.month; let i = $index) {
+              <!-- Bar -->
+              <rect
+                [attr.x]="barX(i, stats.missionsByMonth)"
+                [attr.y]="barY(item.count, stats.missionsByMonth)"
+                [attr.width]="barWidth(stats.missionsByMonth)"
+                [attr.height]="barH(item.count, stats.missionsByMonth)"
+                rx="5" fill="#3b82f6" opacity="0.85"
+              />
+              <!-- Count label -->
+              <text
+                [attr.x]="barX(i, stats.missionsByMonth) + barWidth(stats.missionsByMonth) / 2"
+                [attr.y]="barY(item.count, stats.missionsByMonth) - 5"
+                text-anchor="middle" font-size="11" fill="#3b82f6" font-weight="600"
+              >{{ item.count }}</text>
+              <!-- Month label -->
+              <text
+                [attr.x]="barX(i, stats.missionsByMonth) + barWidth(stats.missionsByMonth) / 2"
+                [attr.y]="chartHeight + 20"
+                text-anchor="middle" font-size="11" fill="#6b7280"
+              >{{ item.label }}</text>
+            }
+          </svg>
+        </div>
+      } @else {
+        <div class="empty-state" style="padding:30px">No monthly data yet</div>
+      }
+    </div>
+
+    <!-- Deliveries by Month -->
+    <div class="chart-card">
+      <div class="chart-header">
+        <h3>📦 Deliveries — Last 6 Months</h3>
+        <span class="chart-total">{{ stats.totalDeliveries }} total</span>
+      </div>
+      @if (stats.deliveriesByMonth && stats.deliveriesByMonth.length > 0) {
+        <div class="monthly-chart">
+          <svg [attr.viewBox]="'0 0 ' + chartWidth + ' ' + (chartHeight + 30)" class="monthly-svg">
+            @for (item of stats.deliveriesByMonth; track item.month; let i = $index) {
+              <rect
+                [attr.x]="barX(i, stats.deliveriesByMonth)"
+                [attr.y]="barY(item.count, stats.deliveriesByMonth)"
+                [attr.width]="barWidth(stats.deliveriesByMonth)"
+                [attr.height]="barH(item.count, stats.deliveriesByMonth)"
+                rx="5" fill="#10b981" opacity="0.85"
+              />
+              <text
+                [attr.x]="barX(i, stats.deliveriesByMonth) + barWidth(stats.deliveriesByMonth) / 2"
+                [attr.y]="barY(item.count, stats.deliveriesByMonth) - 5"
+                text-anchor="middle" font-size="11" fill="#10b981" font-weight="600"
+              >{{ item.count }}</text>
+              <text
+                [attr.x]="barX(i, stats.deliveriesByMonth) + barWidth(stats.deliveriesByMonth) / 2"
+                [attr.y]="chartHeight + 20"
+                text-anchor="middle" font-size="11" fill="#6b7280"
+              >{{ item.label }}</text>
+            }
+          </svg>
+        </div>
+      } @else {
+        <div class="empty-state" style="padding:30px">No monthly data yet</div>
+      }
+    </div>
+
+  </div>
+
+  <!-- Recent Missions Table -->
+  <div class="section-card">
+    <div class="section-header">
+      <h3>🕐 Recent Missions</h3>
+      <button class="btn-export" (click)="exportMissions()">📄 Export CSV</button>
+    </div>
+    @if (stats.recentMissions.length === 0) {
+      <div class="empty-state">No missions yet</div>
+    } @else {
+      <table class="recent-table">
+        <thead>
+          <tr>
+            <th>Route</th>
+            <th>Start</th>
+            <th>End</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (m of stats.recentMissions; track m.id) {
+            <tr>
+              <td>
+                <div class="route-cell">
+                  <span class="route-from">{{ m.origine }}</span>
+                  <span class="route-arrow">→</span>
+                  <span class="route-to">{{ m.destination }}</span>
+                </div>
+              </td>
+              <td>{{ m.dateDebut | date:'dd/MM/yyyy' }}</td>
+              <td>{{ m.dateFin | date:'dd/MM/yyyy' }}</td>
+              <td>
+                <span class="status-badge status-{{ missionStatusClass(m.status) }}">
+                  {{ missionStatusLabel(m.status) }}
+                </span>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    }
+  </div>
+
+  } <!-- end if stats -->
+
+</div>

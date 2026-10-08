@@ -1,0 +1,22 @@
+<div class="app-layout">
+
+  <!-- TOAST NOTIFICATIONS (global) -->
+  <app-toast-container></app-toast-container>
+
+  <!-- SIDEBAR (fixed) -->
+  <app-sidebar></app-sidebar>
+
+  <!-- MAIN AREA — shifts right based on sidebar width -->
+  <div class="main-area" [class.collapsed]="isCollapsed">
+
+    <!-- HEADER -->
+    <app-header></app-header>
+
+    <!-- PAGE CONTENT -->
+    <main class="page-content">
+      <router-outlet></router-outlet>
+    </main>
+
+  </div>
+
+</div>

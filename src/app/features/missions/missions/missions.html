@@ -1,0 +1,197 @@
+<div class="page">
+  <div class="page-header">
+    <div><h1>Missions</h1><p>Manage transport missions.</p></div>
+    <div class="header-actions">
+      <button type="button" class="btn-export" (click)="exportPdf()">📋 Export PDF</button>
+      <button type="button" class="btn-export" (click)="exportCSV()">📄 Export CSV</button>
+      <button type="button" class="add-button" (click)="openAddModal()"><span>+</span> Add Mission</button>
+    </div>
+  </div>
+
+  <div class="stats-grid">
+    <div class="stat-card" (click)="statusFilter = ''" [class.active-filter]="statusFilter === ''">
+      <div class="stat-icon blue">🗺️</div><div class="stat-content"><span class="stat-label">Total</span><strong>{{ totalMissions }}</strong></div>
+    </div>
+    <div class="stat-card" (click)="statusFilter = 0" [class.active-filter]="statusFilter === 0">
+      <div class="stat-icon orange">⏳</div><div class="stat-content"><span class="stat-label">Pending</span><strong>{{ pendingMissions }}</strong></div>
+    </div>
+    <div class="stat-card" (click)="statusFilter = 1" [class.active-filter]="statusFilter === 1">
+      <div class="stat-icon purple">◆</div><div class="stat-content"><span class="stat-label">In Progress</span><strong>{{ inProgressMissions }}</strong></div>
+    </div>
+    <div class="stat-card" (click)="statusFilter = 2" [class.active-filter]="statusFilter === 2">
+      <div class="stat-icon green">✓</div><div class="stat-content"><span class="stat-label">Completed</span><strong>{{ completedMissions }}</strong></div>
+    </div>
+  </div>
+
+  <div class="main-card">
+    <div class="card-header">
+      <div><h2>Mission List</h2><p>View and manage all missions.</p></div>
+      <div class="filter-bar">
+        <div class="search-box">
+          <span>🔍</span>
+          <input type="text" [(ngModel)]="searchTerm" placeholder="Search missions..." />
+        </div>
+        <select class="filter-select" [(ngModel)]="statusFilter">
+          <option value="">All statuses</option>
+          @for (opt of statusOptions; track opt.value) {
+            <option [value]="opt.value">{{ opt.label }}</option>
+          }
+        </select>
+        @if (hasActiveFilters) {
+          <button class="btn-clear" (click)="clearFilters()">✕ Clear</button>
+        }
+      </div>
+    </div>
+    <div class="table-container">
+      @if (isLoading) {
+        <div class="loading-state">Loading missions...</div>
+      } @else {
+        <table>
+          <thead>
+            <tr>
+              <th>ORIGIN → DESTINATION</th>
+              <th>EMPLOYEE ID</th>
+              <th>VEHICLE ID</th>
+              <th>START DATE</th>
+              <th>END DATE</th>
+              <th>STATUS</th>
+              <th>ACTIONS</th>
+            </tr>
+          </thead>
+          <tbody>
+            @for (m of pagedMissions; track m.id) {
+              <tr>
+                <td>
+                  <div class="route-info">
+                    <span class="route-icon">🗺️</span>
+                    <div>
+                      <strong>{{ m.origine }}</strong>
+                      <small>→ {{ m.destination }}</small>
+                    </div>
+                  </div>
+                </td>
+                <td><small class="guid-cell">{{ m.employeeId.substring(0,8) }}...</small></td>
+                <td><small class="guid-cell">{{ m.vehicleId.substring(0,8) }}...</small></td>
+                <td>{{ m.dateDebut | date:'dd/MM/yyyy' }}</td>
+                <td>{{ m.dateFin | date:'dd/MM/yyyy' }}</td>
+                <td>
+                  <span class="status-badge" [ngClass]="statusClasses[m.status]">
+                    <span class="status-dot"></span>
+                    {{ statusLabels[m.status] }}
+                  </span>
+                </td>
+                <td>
+                  <div class="actions">
+                    <button type="button" class="action-button edit" (click)="openEditModal(m)" title="Edit">✎</button>
+                    <button type="button" class="action-button delete" (click)="confirmDelete(m)" title="Delete">×</button>
+                  </div>
+                </td>
+              </tr>
+            }
+            @if (filteredMissions.length === 0) {
+              <tr><td colspan="7" class="empty-state"><span>🗺️</span><h3>No missions found</h3></td></tr>
+            }
+          </tbody>
+        </table>
+        <app-pagination
+          [totalItems]="filteredMissions.length"
+          [pageSize]="pageSize"
+          [currentPage]="currentPage"
+          (pageChange)="onPageChange($event)"
+          (pageSizeChange)="onPageSizeChange($event)"
+        />
+      }
+    </div>
+  </div>
+</div>
+
+<!-- ADD / EDIT MODAL -->
+@if (showModal) {
+  <div (click)="closeModal()"
+       style="position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;z-index:9999">
+    <div (click)="$event.stopPropagation()"
+         style="background:#fff;border-radius:16px;width:560px;max-width:95vw;max-height:90vh;overflow-y:auto;box-shadow:0 20px 60px rgba(0,0,0,0.25)">
+      <div class="modal-header">
+        <h3>{{ isEditing ? 'Edit Mission' : 'Add Mission' }}</h3>
+        <button type="button" class="modal-close" (click)="closeModal()">×</button>
+      </div>
+      <div class="modal-body">
+        @if (submitError) { <div class="error-banner">{{ submitError }}</div> }
+        <div class="form-row">
+          <div class="form-group">
+            <label>Employee</label>
+            <select [(ngModel)]="form.employeeId">
+              <option value="">-- Select employee --</option>
+              @for (e of employees; track e.id) {
+                <option [ngValue]="e.id">{{ e.matricule }} — {{ e.position }}</option>
+              }
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Vehicle</label>
+            <select [(ngModel)]="form.vehicleId">
+              <option value="">-- Select vehicle --</option>
+              @for (v of vehicles; track v.id) {
+                <option [ngValue]="v.id">{{ v.immatriculation }} ({{ v.marque }})</option>
+              }
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Origin (Origine)</label>
+            <input type="text" [(ngModel)]="form.origine" placeholder="Tunis" />
+          </div>
+          <div class="form-group">
+            <label>Destination</label>
+            <input type="text" [(ngModel)]="form.destination" placeholder="Sfax" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Start Date</label>
+            <input type="date" [(ngModel)]="form.dateDebut" />
+          </div>
+          <div class="form-group">
+            <label>End Date</label>
+            <input type="date" [(ngModel)]="form.dateFin" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Status</label>
+          <select [(ngModel)]="form.status">
+            <option [ngValue]="0">Pending</option>
+            <option [ngValue]="1">In Progress</option>
+            <option [ngValue]="2">Completed</option>
+            <option [ngValue]="3">Cancelled</option>
+          </select>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn-cancel" (click)="closeModal()">Cancel</button>
+        <button type="button" class="btn-save" (click)="submitForm()" [disabled]="isSubmitting">
+          {{ isSubmitting ? 'Saving...' : (isEditing ? 'Update' : 'Add Mission') }}
+        </button>
+      </div>
+    </div>
+  </div>
+}
+
+<!-- DELETE CONFIRM -->
+@if (deleteConfirmId) {
+  <div (click)="cancelDelete()"
+       style="position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;z-index:9999">
+    <div (click)="$event.stopPropagation()"
+         style="background:#fff;border-radius:16px;width:420px;max-width:95vw;box-shadow:0 20px 60px rgba(0,0,0,0.25)">
+      <div class="modal-header"><h3>🗑 Delete Mission</h3><button type="button" class="modal-close" (click)="cancelDelete()">×</button></div>
+      <div class="modal-body">
+        <p>Delete this mission? This cannot be undone.</p>
+        <p style="margin-top:8px;font-size:12px;color:#dc2626">⚠ This will also delete all linked deliveries and tracking records.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn-cancel" (click)="cancelDelete()">Cancel</button>
+        <button type="button" class="btn-delete" (click)="deleteMission()">Delete</button>
+      </div>
+    </div>
+  </div>
+}

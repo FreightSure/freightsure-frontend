@@ -1,0 +1,28 @@
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  background: #f5f7fb;
+}
+
+/* Main content shifts right — sidebar is fixed at 255px */
+.main-area {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  margin-left: 255px;
+  transition: margin-left 0.25s ease;
+  min-height: 100vh;
+}
+
+/* When sidebar is collapsed (68px wide) */
+.main-area.collapsed {
+  margin-left: 68px;
+}
+
+.page-content {
+  flex: 1;
+  padding: 0;
+  /* NO overflow-x: hidden — it blocks position:fixed modals */
+}

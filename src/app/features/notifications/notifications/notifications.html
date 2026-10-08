@@ -1,0 +1,62 @@
+<div class="page">
+  <div class="page-header">
+    <div><h1>Notifications</h1><p>View and manage system notifications.</p></div>
+  </div>
+  @if (errorMessage) { <div class="error-banner">{{ errorMessage }}</div> }
+  <div class="stats-grid">
+    <div class="stat-card"><div class="stat-icon blue">🔔</div><div class="stat-content"><span class="stat-label">Total</span><strong>{{ totalNotifications }}</strong></div></div>
+    <div class="stat-card"><div class="stat-icon orange">📬</div><div class="stat-content"><span class="stat-label">Unread</span><strong>{{ unreadNotifications }}</strong></div></div>
+    <div class="stat-card"><div class="stat-icon green">✓</div><div class="stat-content"><span class="stat-label">Read</span><strong>{{ readNotifications }}</strong></div></div>
+  </div>
+  <div class="main-card">
+    <div class="card-header">
+      <div><h2>Notification List</h2><p>All system notifications.</p></div>
+      <div class="search-box"><span>🔍</span><input type="text" [(ngModel)]="searchTerm" placeholder="Search notifications..." /></div>
+    </div>
+    <div class="table-container">
+      @if (isLoading) { <div class="loading-state">Loading notifications...</div> }
+      @else {
+        <table>
+          <thead><tr><th>TYPE</th><th>MESSAGE</th><th>STATUS</th><th>ACTIONS</th></tr></thead>
+          <tbody>
+            @for (n of filteredNotifications; track n.id) {
+              <tr [class.unread-row]="!n.isRead">
+                <td>
+                  <span class="type-badge" [ngClass]="typeClasses[n.type]">
+                    {{ typeIcons[n.type] }} {{ typeLabels[n.type] }}
+                  </span>
+                </td>
+                <td><span [class.unread-text]="!n.isRead">{{ n.message }}</span></td>
+                <td>
+                  <span class="status-badge" [class.unread]="!n.isRead" [class.read]="n.isRead">
+                    {{ n.isRead ? '✓ Read' : '● Unread' }}
+                  </span>
+                </td>
+                <td>
+                  <div class="actions">
+                    @if (!n.isRead) {
+                      <button type="button" class="action-button read" (click)="markAsRead(n)" title="Mark as read">✓</button>
+                    }
+                    <button type="button" class="action-button delete" (click)="confirmDelete(n.id)" title="Delete">×</button>
+                  </div>
+                </td>
+              </tr>
+            }
+            @if (filteredNotifications.length === 0) {
+              <tr><td colspan="4" class="empty-state"><span>🔔</span><h3>No notifications found</h3></td></tr>
+            }
+          </tbody>
+        </table>
+      }
+    </div>
+  </div>
+</div>
+@if (deleteConfirmId) {
+  <div class="modal-overlay" (click)="cancelDelete()">
+    <div class="modal" (click)="$event.stopPropagation()">
+      <div class="modal-header"><h3>Confirm Delete</h3><button type="button" class="modal-close" (click)="cancelDelete()">×</button></div>
+      <div class="modal-body"><p>Delete this notification?</p></div>
+      <div class="modal-footer"><button type="button" class="btn-cancel" (click)="cancelDelete()">Cancel</button><button type="button" class="btn-delete" (click)="deleteNotification()">Delete</button></div>
+    </div>
+  </div>
+}

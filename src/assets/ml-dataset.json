@@ -1,0 +1,3602 @@
+﻿[
+    {
+        "dayOfWeek":  4,
+        "month":  2,
+        "plannedDays":  4.5,
+        "vehicleStatus":  1,
+        "employeeRate":  0.17,
+        "concurrentMissions":  2,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  3,
+        "month":  3,
+        "plannedDays":  22.3,
+        "vehicleStatus":  0,
+        "employeeRate":  0.26,
+        "concurrentMissions":  5,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  2,
+        "month":  4,
+        "plannedDays":  15.5,
+        "vehicleStatus":  0,
+        "employeeRate":  0.81,
+        "concurrentMissions":  6,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  1,
+        "month":  2,
+        "plannedDays":  20.7,
+        "vehicleStatus":  2,
+        "employeeRate":  0.54,
+        "concurrentMissions":  0,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  1,
+        "month":  11,
+        "plannedDays":  20.4,
+        "vehicleStatus":  1,
+        "employeeRate":  0.19,
+        "concurrentMissions":  0,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  4,
+        "month":  10,
+        "plannedDays":  1.1,
+        "vehicleStatus":  1,
+        "employeeRate":  0.81,
+        "concurrentMissions":  8,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  1,
+        "month":  1,
+        "plannedDays":  2.4,
+        "vehicleStatus":  2,
+        "employeeRate":  0.63,
+        "concurrentMissions":  1,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  5,
+        "month":  4,
+        "plannedDays":  19.1,
+        "vehicleStatus":  0,
+        "employeeRate":  0.04,
+        "concurrentMissions":  6,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  0,
+        "month":  6,
+        "plannedDays":  20.8,
+        "vehicleStatus":  1,
+        "employeeRate":  0.22,
+        "concurrentMissions":  0,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  1,
+        "month":  1,
+        "plannedDays":  21.1,
+        "vehicleStatus":  0,
+        "employeeRate":  0.46,
+        "concurrentMissions":  0,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  3,
+        "month":  7,
+        "plannedDays":  15,
+        "vehicleStatus":  0,
+        "employeeRate":  0.83,
+        "concurrentMissions":  0,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  0,
+        "month":  8,
+        "plannedDays":  2,
+        "vehicleStatus":  3,
+        "employeeRate":  0.93,
+        "concurrentMissions":  5,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  4,
+        "month":  1,
+        "plannedDays":  11.4,
+        "vehicleStatus":  0,
+        "employeeRate":  0.44,
+        "concurrentMissions":  8,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  2,
+        "month":  4,
+        "plannedDays":  26.4,
+        "vehicleStatus":  1,
+        "employeeRate":  0.74,
+        "concurrentMissions":  0,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  6,
+        "month":  4,
+        "plannedDays":  20.9,
+        "vehicleStatus":  0,
+        "employeeRate":  0.1,
+        "concurrentMissions":  4,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  5,
+        "month":  2,
+        "plannedDays":  4.8,
+        "vehicleStatus":  0,
+        "employeeRate":  0.59,
+        "concurrentMissions":  5,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  5,
+        "month":  9,
+        "plannedDays":  21,
+        "vehicleStatus":  0,
+        "employeeRate":  0.55,
+        "concurrentMissions":  10,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  0,
+        "month":  5,
+        "plannedDays":  27,
+        "vehicleStatus":  0,
+        "employeeRate":  0.22,
+        "concurrentMissions":  2,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  1,
+        "month":  8,
+        "plannedDays":  12.8,
+        "vehicleStatus":  0,
+        "employeeRate":  0.99,
+        "concurrentMissions":  1,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  2,
+        "month":  4,
+        "plannedDays":  22,
+        "vehicleStatus":  2,
+        "employeeRate":  0.01,
+        "concurrentMissions":  0,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  6,
+        "month":  3,
+        "plannedDays":  26.9,
+        "vehicleStatus":  2,
+        "employeeRate":  0.28,
+        "concurrentMissions":  5,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  4,
+        "month":  3,
+        "plannedDays":  9.3,
+        "vehicleStatus":  0,
+        "employeeRate":  0.03,
+        "concurrentMissions":  2,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  6,
+        "month":  10,
+        "plannedDays":  4.8,
+        "vehicleStatus":  3,
+        "employeeRate":  0.19,
+        "concurrentMissions":  3,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  3,
+        "month":  9,
+        "plannedDays":  4.4,
+        "vehicleStatus":  1,
+        "employeeRate":  0.39,
+        "concurrentMissions":  9,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  2,
+        "month":  12,
+        "plannedDays":  14,
+        "vehicleStatus":  1,
+        "employeeRate":  0.95,
+        "concurrentMissions":  8,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  0,
+        "month":  1,
+        "plannedDays":  6.1,
+        "vehicleStatus":  3,
+        "employeeRate":  0.72,
+        "concurrentMissions":  4,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  2,
+        "month":  2,
+        "plannedDays":  26.5,
+        "vehicleStatus":  3,
+        "employeeRate":  0.89,
+        "concurrentMissions":  1,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  3,
+        "month":  8,
+        "plannedDays":  27.4,
+        "vehicleStatus":  2,
+        "employeeRate":  0.75,
+        "concurrentMissions":  3,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  3,
+        "month":  10,
+        "plannedDays":  7.9,
+        "vehicleStatus":  3,
+        "employeeRate":  0.66,
+        "concurrentMissions":  2,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  1,
+        "month":  11,
+        "plannedDays":  18.9,
+        "vehicleStatus":  0,
+        "employeeRate":  0.42,
+        "concurrentMissions":  8,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  5,
+        "month":  12,
+        "plannedDays":  27.4,
+        "vehicleStatus":  1,
+        "employeeRate":  0.89,
+        "concurrentMissions":  10,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  4,
+        "month":  3,
+        "plannedDays":  18.8,
+        "vehicleStatus":  1,
+        "employeeRate":  0.71,
+        "concurrentMissions":  1,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  2,
+        "month":  7,
+        "plannedDays":  21.2,
+        "vehicleStatus":  0,
+        "employeeRate":  0.53,
+        "concurrentMissions":  8,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  1,
+        "month":  12,
+        "plannedDays":  2.5,
+        "vehicleStatus":  0,
+        "employeeRate":  0.21,
+        "concurrentMissions":  3,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  2,
+        "month":  4,
+        "plannedDays":  25.7,
+        "vehicleStatus":  1,
+        "employeeRate":  0.37,
+        "concurrentMissions":  4,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  4,
+        "month":  12,
+        "plannedDays":  11,
+        "vehicleStatus":  2,
+        "employeeRate":  0.31,
+        "concurrentMissions":  2,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  4,
+        "month":  8,
+        "plannedDays":  11.8,
+        "vehicleStatus":  3,
+        "employeeRate":  0.08,
+        "concurrentMissions":  5,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  2,
+        "month":  12,
+        "plannedDays":  25.7,
+        "vehicleStatus":  3,
+        "employeeRate":  0.02,
+        "concurrentMissions":  3,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  0,
+        "month":  11,
+        "plannedDays":  12.5,
+        "vehicleStatus":  1,
+        "employeeRate":  0.66,
+        "concurrentMissions":  10,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  6,
+        "month":  10,
+        "plannedDays":  1.9,
+        "vehicleStatus":  0,
+        "employeeRate":  0.66,
+        "concurrentMissions":  0,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  3,
+        "month":  5,
+        "plannedDays":  10.6,
+        "vehicleStatus":  0,
+        "employeeRate":  0.61,
+        "concurrentMissions":  7,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  2,
+        "month":  8,
+        "plannedDays":  3.8,
+        "vehicleStatus":  0,
+        "employeeRate":  0.84,
+        "concurrentMissions":  3,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  2,
+        "month":  1,
+        "plannedDays":  17.2,
+        "vehicleStatus":  0,
+        "employeeRate":  0.16,
+        "concurrentMissions":  2,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  0,
+        "month":  12,
+        "plannedDays":  6,
+        "vehicleStatus":  1,
+        "employeeRate":  0.2,
+        "concurrentMissions":  7,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  6,
+        "month":  5,
+        "plannedDays":  18.2,
+        "vehicleStatus":  0,
+        "employeeRate":  0.43,
+        "concurrentMissions":  2,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  3,
+        "month":  7,
+        "plannedDays":  19.8,
+        "vehicleStatus":  0,
+        "employeeRate":  0.65,
+        "concurrentMissions":  10,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  1,
+        "month":  4,
+        "plannedDays":  16.1,
+        "vehicleStatus":  2,
+        "employeeRate":  0.69,
+        "concurrentMissions":  3,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  5,
+        "month":  6,
+        "plannedDays":  28.7,
+        "vehicleStatus":  1,
+        "employeeRate":  0.86,
+        "concurrentMissions":  0,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  2,
+        "month":  2,
+        "plannedDays":  16.8,
+        "vehicleStatus":  0,
+        "employeeRate":  0,
+        "concurrentMissions":  10,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  2,
+        "month":  6,
+        "plannedDays":  21,
+        "vehicleStatus":  0,
+        "employeeRate":  0.1,
+        "concurrentMissions":  2,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  3,
+        "month":  11,
+        "plannedDays":  27.3,
+        "vehicleStatus":  1,
+        "employeeRate":  0.21,
+        "concurrentMissions":  10,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  4,
+        "month":  8,
+        "plannedDays":  24.6,
+        "vehicleStatus":  1,
+        "employeeRate":  0.32,
+        "concurrentMissions":  0,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  6,
+        "month":  8,
+        "plannedDays":  26.7,
+        "vehicleStatus":  1,
+        "employeeRate":  0.15,
+        "concurrentMissions":  4,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  2,
+        "month":  2,
+        "plannedDays":  1.1,
+        "vehicleStatus":  1,
+        "employeeRate":  0.02,
+        "concurrentMissions":  2,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  5,
+        "month":  10,
+        "plannedDays":  12.2,
+        "vehicleStatus":  1,
+        "employeeRate":  0.13,
+        "concurrentMissions":  8,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  3,
+        "month":  1,
+        "plannedDays":  1,
+        "vehicleStatus":  1,
+        "employeeRate":  0.09,
+        "concurrentMissions":  5,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  3,
+        "month":  9,
+        "plannedDays":  26.2,
+        "vehicleStatus":  1,
+        "employeeRate":  0.89,
+        "concurrentMissions":  3,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  6,
+        "month":  10,
+        "plannedDays":  24.7,
+        "vehicleStatus":  3,
+        "employeeRate":  0.81,
+        "concurrentMissions":  7,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  5,
+        "month":  12,
+        "plannedDays":  24.7,
+        "vehicleStatus":  0,
+        "employeeRate":  0.71,
+        "concurrentMissions":  10,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  5,
+        "month":  6,
+        "plannedDays":  26.4,
+        "vehicleStatus":  0,
+        "employeeRate":  0.27,
+        "concurrentMissions":  9,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  4,
+        "month":  12,
+        "plannedDays":  26.7,
+        "vehicleStatus":  0,
+        "employeeRate":  0.85,
+        "concurrentMissions":  3,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  2,
+        "month":  2,
+        "plannedDays":  28.3,
+        "vehicleStatus":  0,
+        "employeeRate":  0.88,
+        "concurrentMissions":  5,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  0,
+        "month":  7,
+        "plannedDays":  19.4,
+        "vehicleStatus":  0,
+        "employeeRate":  0.13,
+        "concurrentMissions":  2,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  0,
+        "month":  2,
+        "plannedDays":  14,
+        "vehicleStatus":  0,
+        "employeeRate":  0.56,
+        "concurrentMissions":  10,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  1,
+        "month":  12,
+        "plannedDays":  14.5,
+        "vehicleStatus":  1,
+        "employeeRate":  0.53,
+        "concurrentMissions":  0,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  6,
+        "month":  12,
+        "plannedDays":  25.7,
+        "vehicleStatus":  3,
+        "employeeRate":  0.32,
+        "concurrentMissions":  2,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  5,
+        "month":  11,
+        "plannedDays":  2.5,
+        "vehicleStatus":  2,
+        "employeeRate":  0.45,
+        "concurrentMissions":  9,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  6,
+        "month":  4,
+        "plannedDays":  25.6,
+        "vehicleStatus":  0,
+        "employeeRate":  0.62,
+        "concurrentMissions":  6,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  5,
+        "month":  6,
+        "plannedDays":  20,
+        "vehicleStatus":  0,
+        "employeeRate":  0.37,
+        "concurrentMissions":  1,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  0,
+        "month":  6,
+        "plannedDays":  15.4,
+        "vehicleStatus":  0,
+        "employeeRate":  0.47,
+        "concurrentMissions":  7,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  4,
+        "month":  10,
+        "plannedDays":  10.9,
+        "vehicleStatus":  2,
+        "employeeRate":  0.96,
+        "concurrentMissions":  3,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  1,
+        "month":  5,
+        "plannedDays":  16.5,
+        "vehicleStatus":  0,
+        "employeeRate":  0.14,
+        "concurrentMissions":  10,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  5,
+        "month":  8,
+        "plannedDays":  14.4,
+        "vehicleStatus":  3,
+        "employeeRate":  0.43,
+        "concurrentMissions":  9,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  3,
+        "month":  3,
+        "plannedDays":  20.1,
+        "vehicleStatus":  3,
+        "employeeRate":  0.1,
+        "concurrentMissions":  3,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  2,
+        "month":  7,
+        "plannedDays":  14.4,
+        "vehicleStatus":  3,
+        "employeeRate":  0.15,
+        "concurrentMissions":  6,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  3,
+        "month":  7,
+        "plannedDays":  10.1,
+        "vehicleStatus":  1,
+        "employeeRate":  0.28,
+        "concurrentMissions":  1,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  0,
+        "month":  2,
+        "plannedDays":  5.8,
+        "vehicleStatus":  0,
+        "employeeRate":  0.21,
+        "concurrentMissions":  8,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  6,
+        "month":  1,
+        "plannedDays":  13.4,
+        "vehicleStatus":  0,
+        "employeeRate":  0.86,
+        "concurrentMissions":  0,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  3,
+        "month":  9,
+        "plannedDays":  25.3,
+        "vehicleStatus":  3,
+        "employeeRate":  0.04,
+        "concurrentMissions":  6,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  6,
+        "month":  1,
+        "plannedDays":  4.5,
+        "vehicleStatus":  3,
+        "employeeRate":  0.3,
+        "concurrentMissions":  1,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  0,
+        "month":  2,
+        "plannedDays":  8,
+        "vehicleStatus":  0,
+        "employeeRate":  0.65,
+        "concurrentMissions":  6,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  0,
+        "month":  7,
+        "plannedDays":  21.3,
+        "vehicleStatus":  3,
+        "employeeRate":  0.57,
+        "concurrentMissions":  3,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  3,
+        "month":  1,
+        "plannedDays":  27.5,
+        "vehicleStatus":  0,
+        "employeeRate":  0.59,
+        "concurrentMissions":  1,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  5,
+        "month":  6,
+        "plannedDays":  23.4,
+        "vehicleStatus":  0,
+        "employeeRate":  0.61,
+        "concurrentMissions":  6,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  0,
+        "month":  1,
+        "plannedDays":  7.6,
+        "vehicleStatus":  3,
+        "employeeRate":  0.6,
+        "concurrentMissions":  1,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  6,
+        "month":  3,
+        "plannedDays":  25.7,
+        "vehicleStatus":  0,
+        "employeeRate":  0.42,
+        "concurrentMissions":  7,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  1,
+        "month":  2,
+        "plannedDays":  28.3,
+        "vehicleStatus":  1,
+        "employeeRate":  0.21,
+        "concurrentMissions":  4,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  0,
+        "month":  3,
+        "plannedDays":  20.5,
+        "vehicleStatus":  1,
+        "employeeRate":  0.02,
+        "concurrentMissions":  4,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  4,
+        "month":  6,
+        "plannedDays":  26.9,
+        "vehicleStatus":  0,
+        "employeeRate":  0.05,
+        "concurrentMissions":  2,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  3,
+        "month":  6,
+        "plannedDays":  28.1,
+        "vehicleStatus":  3,
+        "employeeRate":  0.26,
+        "concurrentMissions":  7,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  5,
+        "month":  1,
+        "plannedDays":  3.2,
+        "vehicleStatus":  0,
+        "employeeRate":  0.38,
+        "concurrentMissions":  4,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  2,
+        "month":  10,
+        "plannedDays":  22.1,
+        "vehicleStatus":  0,
+        "employeeRate":  0.17,
+        "concurrentMissions":  8,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  6,
+        "month":  7,
+        "plannedDays":  6.8,
+        "vehicleStatus":  1,
+        "employeeRate":  0.73,
+        "concurrentMissions":  6,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  5,
+        "month":  12,
+        "plannedDays":  5.9,
+        "vehicleStatus":  0,
+        "employeeRate":  0.47,
+        "concurrentMissions":  5,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  4,
+        "month":  1,
+        "plannedDays":  15.4,
+        "vehicleStatus":  3,
+        "employeeRate":  0.74,
+        "concurrentMissions":  8,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  0,
+        "month":  8,
+        "plannedDays":  16.1,
+        "vehicleStatus":  1,
+        "employeeRate":  0.95,
+        "concurrentMissions":  5,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  4,
+        "month":  3,
+        "plannedDays":  18.7,
+        "vehicleStatus":  3,
+        "employeeRate":  0.44,
+        "concurrentMissions":  0,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  6,
+        "month":  10,
+        "plannedDays":  11.5,
+        "vehicleStatus":  1,
+        "employeeRate":  0.09,
+        "concurrentMissions":  4,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  0,
+        "month":  11,
+        "plannedDays":  23.5,
+        "vehicleStatus":  3,
+        "employeeRate":  0.96,
+        "concurrentMissions":  10,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  5,
+        "month":  3,
+        "plannedDays":  13.8,
+        "vehicleStatus":  0,
+        "employeeRate":  0.08,
+        "concurrentMissions":  8,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  6,
+        "month":  9,
+        "plannedDays":  27.8,
+        "vehicleStatus":  2,
+        "employeeRate":  0.05,
+        "concurrentMissions":  9,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  5,
+        "month":  7,
+        "plannedDays":  14.7,
+        "vehicleStatus":  0,
+        "employeeRate":  0.43,
+        "concurrentMissions":  1,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  1,
+        "month":  2,
+        "plannedDays":  12.7,
+        "vehicleStatus":  1,
+        "employeeRate":  0.31,
+        "concurrentMissions":  1,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  5,
+        "month":  9,
+        "plannedDays":  21.2,
+        "vehicleStatus":  3,
+        "employeeRate":  0.54,
+        "concurrentMissions":  7,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  6,
+        "month":  3,
+        "plannedDays":  13.7,
+        "vehicleStatus":  0,
+        "employeeRate":  0.22,
+        "concurrentMissions":  9,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  0,
+        "month":  6,
+        "plannedDays":  22,
+        "vehicleStatus":  0,
+        "employeeRate":  0.61,
+        "concurrentMissions":  10,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  2,
+        "month":  4,
+        "plannedDays":  25.4,
+        "vehicleStatus":  1,
+        "employeeRate":  0.88,
+        "concurrentMissions":  10,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  0,
+        "month":  1,
+        "plannedDays":  22.6,
+        "vehicleStatus":  2,
+        "employeeRate":  0.71,
+        "concurrentMissions":  8,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  6,
+        "month":  3,
+        "plannedDays":  22.9,
+        "vehicleStatus":  1,
+        "employeeRate":  0.11,
+        "concurrentMissions":  3,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  2,
+        "month":  1,
+        "plannedDays":  20,
+        "vehicleStatus":  0,
+        "employeeRate":  0.28,
+        "concurrentMissions":  7,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  5,
+        "month":  8,
+        "plannedDays":  18.3,
+        "vehicleStatus":  1,
+        "employeeRate":  0.12,
+        "concurrentMissions":  7,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  2,
+        "month":  11,
+        "plannedDays":  14.2,
+        "vehicleStatus":  1,
+        "employeeRate":  0.75,
+        "concurrentMissions":  2,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  0,
+        "month":  9,
+        "plannedDays":  17.6,
+        "vehicleStatus":  1,
+        "employeeRate":  0.09,
+        "concurrentMissions":  9,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  1,
+        "month":  12,
+        "plannedDays":  15.8,
+        "vehicleStatus":  1,
+        "employeeRate":  0.67,
+        "concurrentMissions":  4,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  1,
+        "month":  3,
+        "plannedDays":  9.7,
+        "vehicleStatus":  1,
+        "employeeRate":  0.29,
+        "concurrentMissions":  4,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  2,
+        "month":  2,
+        "plannedDays":  2.8,
+        "vehicleStatus":  1,
+        "employeeRate":  0.05,
+        "concurrentMissions":  9,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  2,
+        "month":  4,
+        "plannedDays":  24.6,
+        "vehicleStatus":  0,
+        "employeeRate":  0.07,
+        "concurrentMissions":  0,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  2,
+        "month":  2,
+        "plannedDays":  20.8,
+        "vehicleStatus":  0,
+        "employeeRate":  0.84,
+        "concurrentMissions":  10,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  4,
+        "month":  2,
+        "plannedDays":  6.8,
+        "vehicleStatus":  1,
+        "employeeRate":  0.25,
+        "concurrentMissions":  3,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  4,
+        "month":  2,
+        "plannedDays":  2.7,
+        "vehicleStatus":  1,
+        "employeeRate":  0.83,
+        "concurrentMissions":  4,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  3,
+        "month":  7,
+        "plannedDays":  26.6,
+        "vehicleStatus":  0,
+        "employeeRate":  0.98,
+        "concurrentMissions":  7,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  4,
+        "month":  9,
+        "plannedDays":  4.8,
+        "vehicleStatus":  1,
+        "employeeRate":  0.4,
+        "concurrentMissions":  8,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  0,
+        "month":  8,
+        "plannedDays":  12.7,
+        "vehicleStatus":  1,
+        "employeeRate":  0.42,
+        "concurrentMissions":  9,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  0,
+        "month":  11,
+        "plannedDays":  5.1,
+        "vehicleStatus":  2,
+        "employeeRate":  0.5,
+        "concurrentMissions":  3,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  1,
+        "month":  10,
+        "plannedDays":  26.2,
+        "vehicleStatus":  0,
+        "employeeRate":  0.61,
+        "concurrentMissions":  5,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  3,
+        "month":  10,
+        "plannedDays":  5,
+        "vehicleStatus":  3,
+        "employeeRate":  0.34,
+        "concurrentMissions":  8,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  2,
+        "month":  1,
+        "plannedDays":  24.7,
+        "vehicleStatus":  2,
+        "employeeRate":  0.59,
+        "concurrentMissions":  2,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  3,
+        "month":  8,
+        "plannedDays":  1.3,
+        "vehicleStatus":  0,
+        "employeeRate":  0.58,
+        "concurrentMissions":  0,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  4,
+        "month":  10,
+        "plannedDays":  8,
+        "vehicleStatus":  1,
+        "employeeRate":  0.29,
+        "concurrentMissions":  0,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  6,
+        "month":  3,
+        "plannedDays":  11.1,
+        "vehicleStatus":  2,
+        "employeeRate":  0.29,
+        "concurrentMissions":  1,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  5,
+        "month":  4,
+        "plannedDays":  17.4,
+        "vehicleStatus":  0,
+        "employeeRate":  0.12,
+        "concurrentMissions":  7,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  5,
+        "month":  4,
+        "plannedDays":  27.3,
+        "vehicleStatus":  3,
+        "employeeRate":  0.14,
+        "concurrentMissions":  2,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  0,
+        "month":  11,
+        "plannedDays":  24.3,
+        "vehicleStatus":  0,
+        "employeeRate":  0.4,
+        "concurrentMissions":  3,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  0,
+        "month":  11,
+        "plannedDays":  11.8,
+        "vehicleStatus":  0,
+        "employeeRate":  0.66,
+        "concurrentMissions":  5,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  5,
+        "month":  6,
+        "plannedDays":  2.7,
+        "vehicleStatus":  0,
+        "employeeRate":  0.12,
+        "concurrentMissions":  10,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  2,
+        "month":  6,
+        "plannedDays":  10.5,
+        "vehicleStatus":  1,
+        "employeeRate":  0.43,
+        "concurrentMissions":  8,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  3,
+        "month":  4,
+        "plannedDays":  16.9,
+        "vehicleStatus":  0,
+        "employeeRate":  0.88,
+        "concurrentMissions":  10,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  2,
+        "month":  7,
+        "plannedDays":  22.5,
+        "vehicleStatus":  3,
+        "employeeRate":  0.74,
+        "concurrentMissions":  7,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  2,
+        "month":  3,
+        "plannedDays":  1.5,
+        "vehicleStatus":  1,
+        "employeeRate":  0.12,
+        "concurrentMissions":  1,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  5,
+        "month":  11,
+        "plannedDays":  18.4,
+        "vehicleStatus":  0,
+        "employeeRate":  0.2,
+        "concurrentMissions":  9,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  3,
+        "month":  6,
+        "plannedDays":  16.6,
+        "vehicleStatus":  3,
+        "employeeRate":  0.56,
+        "concurrentMissions":  0,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  4,
+        "month":  10,
+        "plannedDays":  26.2,
+        "vehicleStatus":  2,
+        "employeeRate":  0.6,
+        "concurrentMissions":  8,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  6,
+        "month":  4,
+        "plannedDays":  12,
+        "vehicleStatus":  0,
+        "employeeRate":  0.31,
+        "concurrentMissions":  10,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  1,
+        "month":  4,
+        "plannedDays":  1.3,
+        "vehicleStatus":  0,
+        "employeeRate":  0.65,
+        "concurrentMissions":  10,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  3,
+        "month":  12,
+        "plannedDays":  5,
+        "vehicleStatus":  1,
+        "employeeRate":  0.08,
+        "concurrentMissions":  0,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  0,
+        "month":  3,
+        "plannedDays":  27.1,
+        "vehicleStatus":  0,
+        "employeeRate":  0.67,
+        "concurrentMissions":  2,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  2,
+        "month":  2,
+        "plannedDays":  19.9,
+        "vehicleStatus":  1,
+        "employeeRate":  0.42,
+        "concurrentMissions":  5,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  4,
+        "month":  3,
+        "plannedDays":  18.5,
+        "vehicleStatus":  3,
+        "employeeRate":  0.87,
+        "concurrentMissions":  8,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  1,
+        "month":  7,
+        "plannedDays":  19.4,
+        "vehicleStatus":  3,
+        "employeeRate":  0.07,
+        "concurrentMissions":  9,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  6,
+        "month":  10,
+        "plannedDays":  3.8,
+        "vehicleStatus":  1,
+        "employeeRate":  0.74,
+        "concurrentMissions":  6,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  0,
+        "month":  6,
+        "plannedDays":  6.7,
+        "vehicleStatus":  1,
+        "employeeRate":  0.75,
+        "concurrentMissions":  2,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  1,
+        "month":  5,
+        "plannedDays":  23.2,
+        "vehicleStatus":  0,
+        "employeeRate":  0.47,
+        "concurrentMissions":  8,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  5,
+        "month":  7,
+        "plannedDays":  23.2,
+        "vehicleStatus":  0,
+        "employeeRate":  0.22,
+        "concurrentMissions":  6,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  4,
+        "month":  4,
+        "plannedDays":  8.8,
+        "vehicleStatus":  1,
+        "employeeRate":  0.31,
+        "concurrentMissions":  7,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  2,
+        "month":  7,
+        "plannedDays":  28.7,
+        "vehicleStatus":  1,
+        "employeeRate":  0.84,
+        "concurrentMissions":  10,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  5,
+        "month":  6,
+        "plannedDays":  7.8,
+        "vehicleStatus":  0,
+        "employeeRate":  0.59,
+        "concurrentMissions":  4,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  1,
+        "month":  11,
+        "plannedDays":  19.8,
+        "vehicleStatus":  1,
+        "employeeRate":  0.11,
+        "concurrentMissions":  3,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  1,
+        "month":  4,
+        "plannedDays":  10,
+        "vehicleStatus":  1,
+        "employeeRate":  0.99,
+        "concurrentMissions":  0,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  1,
+        "month":  12,
+        "plannedDays":  2.4,
+        "vehicleStatus":  1,
+        "employeeRate":  0.54,
+        "concurrentMissions":  3,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  5,
+        "month":  10,
+        "plannedDays":  16.5,
+        "vehicleStatus":  1,
+        "employeeRate":  0.87,
+        "concurrentMissions":  3,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  0,
+        "month":  7,
+        "plannedDays":  3.1,
+        "vehicleStatus":  1,
+        "employeeRate":  0.21,
+        "concurrentMissions":  9,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  2,
+        "month":  8,
+        "plannedDays":  28.7,
+        "vehicleStatus":  0,
+        "employeeRate":  0.34,
+        "concurrentMissions":  4,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  1,
+        "month":  9,
+        "plannedDays":  5.7,
+        "vehicleStatus":  2,
+        "employeeRate":  0.86,
+        "concurrentMissions":  0,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  3,
+        "month":  3,
+        "plannedDays":  20.5,
+        "vehicleStatus":  0,
+        "employeeRate":  0.1,
+        "concurrentMissions":  1,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  0,
+        "month":  2,
+        "plannedDays":  28.5,
+        "vehicleStatus":  0,
+        "employeeRate":  0.97,
+        "concurrentMissions":  2,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  5,
+        "month":  3,
+        "plannedDays":  25.5,
+        "vehicleStatus":  2,
+        "employeeRate":  0.18,
+        "concurrentMissions":  10,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  2,
+        "month":  1,
+        "plannedDays":  7.3,
+        "vehicleStatus":  0,
+        "employeeRate":  0.95,
+        "concurrentMissions":  7,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  0,
+        "month":  5,
+        "plannedDays":  22.7,
+        "vehicleStatus":  0,
+        "employeeRate":  0.25,
+        "concurrentMissions":  4,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  2,
+        "month":  5,
+        "plannedDays":  17.7,
+        "vehicleStatus":  0,
+        "employeeRate":  0.74,
+        "concurrentMissions":  0,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  3,
+        "month":  1,
+        "plannedDays":  28.1,
+        "vehicleStatus":  0,
+        "employeeRate":  0.18,
+        "concurrentMissions":  10,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  2,
+        "month":  4,
+        "plannedDays":  2.7,
+        "vehicleStatus":  1,
+        "employeeRate":  0.11,
+        "concurrentMissions":  8,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  0,
+        "month":  6,
+        "plannedDays":  24.4,
+        "vehicleStatus":  0,
+        "employeeRate":  0.44,
+        "concurrentMissions":  10,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  5,
+        "month":  3,
+        "plannedDays":  7.4,
+        "vehicleStatus":  2,
+        "employeeRate":  0.81,
+        "concurrentMissions":  5,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  6,
+        "month":  4,
+        "plannedDays":  20.1,
+        "vehicleStatus":  1,
+        "employeeRate":  0.97,
+        "concurrentMissions":  4,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  0,
+        "month":  4,
+        "plannedDays":  24.5,
+        "vehicleStatus":  2,
+        "employeeRate":  0.72,
+        "concurrentMissions":  10,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  0,
+        "month":  9,
+        "plannedDays":  10.2,
+        "vehicleStatus":  0,
+        "employeeRate":  0.58,
+        "concurrentMissions":  4,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  6,
+        "month":  10,
+        "plannedDays":  27.7,
+        "vehicleStatus":  0,
+        "employeeRate":  0.04,
+        "concurrentMissions":  4,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  5,
+        "month":  9,
+        "plannedDays":  19.2,
+        "vehicleStatus":  0,
+        "employeeRate":  0.46,
+        "concurrentMissions":  1,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  0,
+        "month":  5,
+        "plannedDays":  7.5,
+        "vehicleStatus":  0,
+        "employeeRate":  0.39,
+        "concurrentMissions":  3,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  1,
+        "month":  12,
+        "plannedDays":  11.7,
+        "vehicleStatus":  2,
+        "employeeRate":  0.99,
+        "concurrentMissions":  2,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  3,
+        "month":  11,
+        "plannedDays":  17.3,
+        "vehicleStatus":  0,
+        "employeeRate":  0.1,
+        "concurrentMissions":  1,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  3,
+        "month":  9,
+        "plannedDays":  5,
+        "vehicleStatus":  3,
+        "employeeRate":  0.99,
+        "concurrentMissions":  0,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  3,
+        "month":  3,
+        "plannedDays":  12.1,
+        "vehicleStatus":  0,
+        "employeeRate":  0.84,
+        "concurrentMissions":  1,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  2,
+        "month":  2,
+        "plannedDays":  28.8,
+        "vehicleStatus":  0,
+        "employeeRate":  0.09,
+        "concurrentMissions":  1,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  5,
+        "month":  7,
+        "plannedDays":  17.3,
+        "vehicleStatus":  0,
+        "employeeRate":  0.21,
+        "concurrentMissions":  1,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  5,
+        "month":  1,
+        "plannedDays":  4.9,
+        "vehicleStatus":  0,
+        "employeeRate":  0.97,
+        "concurrentMissions":  6,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  4,
+        "month":  2,
+        "plannedDays":  7,
+        "vehicleStatus":  0,
+        "employeeRate":  0.28,
+        "concurrentMissions":  9,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  5,
+        "month":  12,
+        "plannedDays":  13.8,
+        "vehicleStatus":  0,
+        "employeeRate":  0.07,
+        "concurrentMissions":  6,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  5,
+        "month":  8,
+        "plannedDays":  2.1,
+        "vehicleStatus":  0,
+        "employeeRate":  0.01,
+        "concurrentMissions":  2,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  1,
+        "month":  7,
+        "plannedDays":  25.6,
+        "vehicleStatus":  2,
+        "employeeRate":  0.94,
+        "concurrentMissions":  10,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  0,
+        "month":  4,
+        "plannedDays":  26.2,
+        "vehicleStatus":  3,
+        "employeeRate":  0.54,
+        "concurrentMissions":  6,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  0,
+        "month":  10,
+        "plannedDays":  23.2,
+        "vehicleStatus":  2,
+        "employeeRate":  0.33,
+        "concurrentMissions":  10,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  4,
+        "month":  2,
+        "plannedDays":  26.3,
+        "vehicleStatus":  0,
+        "employeeRate":  0.57,
+        "concurrentMissions":  1,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  3,
+        "month":  2,
+        "plannedDays":  10.9,
+        "vehicleStatus":  3,
+        "employeeRate":  0.34,
+        "concurrentMissions":  7,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  3,
+        "month":  5,
+        "plannedDays":  18.2,
+        "vehicleStatus":  0,
+        "employeeRate":  0.89,
+        "concurrentMissions":  0,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  5,
+        "month":  7,
+        "plannedDays":  8.7,
+        "vehicleStatus":  1,
+        "employeeRate":  0.96,
+        "concurrentMissions":  5,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  5,
+        "month":  3,
+        "plannedDays":  6.6,
+        "vehicleStatus":  1,
+        "employeeRate":  0.26,
+        "concurrentMissions":  8,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  3,
+        "month":  12,
+        "plannedDays":  19.1,
+        "vehicleStatus":  0,
+        "employeeRate":  0.79,
+        "concurrentMissions":  7,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  1,
+        "month":  7,
+        "plannedDays":  26.4,
+        "vehicleStatus":  0,
+        "employeeRate":  0.87,
+        "concurrentMissions":  2,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  3,
+        "month":  3,
+        "plannedDays":  14.1,
+        "vehicleStatus":  1,
+        "employeeRate":  0.98,
+        "concurrentMissions":  2,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  3,
+        "month":  8,
+        "plannedDays":  18,
+        "vehicleStatus":  1,
+        "employeeRate":  0.69,
+        "concurrentMissions":  2,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  5,
+        "month":  2,
+        "plannedDays":  9,
+        "vehicleStatus":  0,
+        "employeeRate":  0.9,
+        "concurrentMissions":  10,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  2,
+        "month":  12,
+        "plannedDays":  28.2,
+        "vehicleStatus":  0,
+        "employeeRate":  0.37,
+        "concurrentMissions":  0,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  0,
+        "month":  5,
+        "plannedDays":  10.1,
+        "vehicleStatus":  0,
+        "employeeRate":  0.28,
+        "concurrentMissions":  3,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  0,
+        "month":  9,
+        "plannedDays":  7.7,
+        "vehicleStatus":  0,
+        "employeeRate":  0.56,
+        "concurrentMissions":  7,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  2,
+        "month":  1,
+        "plannedDays":  22,
+        "vehicleStatus":  0,
+        "employeeRate":  0.4,
+        "concurrentMissions":  10,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  2,
+        "month":  8,
+        "plannedDays":  4.7,
+        "vehicleStatus":  3,
+        "employeeRate":  0.28,
+        "concurrentMissions":  4,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  1,
+        "month":  6,
+        "plannedDays":  10.5,
+        "vehicleStatus":  1,
+        "employeeRate":  0.21,
+        "concurrentMissions":  3,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  1,
+        "month":  4,
+        "plannedDays":  16,
+        "vehicleStatus":  0,
+        "employeeRate":  0.92,
+        "concurrentMissions":  3,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  2,
+        "month":  1,
+        "plannedDays":  23.2,
+        "vehicleStatus":  0,
+        "employeeRate":  0.2,
+        "concurrentMissions":  2,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  6,
+        "month":  3,
+        "plannedDays":  1.1,
+        "vehicleStatus":  3,
+        "employeeRate":  0.08,
+        "concurrentMissions":  2,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  5,
+        "month":  3,
+        "plannedDays":  4.2,
+        "vehicleStatus":  0,
+        "employeeRate":  0.93,
+        "concurrentMissions":  3,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  1,
+        "month":  11,
+        "plannedDays":  19.8,
+        "vehicleStatus":  0,
+        "employeeRate":  0.44,
+        "concurrentMissions":  3,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  5,
+        "month":  3,
+        "plannedDays":  20.2,
+        "vehicleStatus":  1,
+        "employeeRate":  0.66,
+        "concurrentMissions":  5,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  4,
+        "month":  5,
+        "plannedDays":  18.4,
+        "vehicleStatus":  0,
+        "employeeRate":  0.16,
+        "concurrentMissions":  0,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  1,
+        "month":  5,
+        "plannedDays":  18.8,
+        "vehicleStatus":  0,
+        "employeeRate":  0.01,
+        "concurrentMissions":  10,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  0,
+        "month":  6,
+        "plannedDays":  12.5,
+        "vehicleStatus":  3,
+        "employeeRate":  0.03,
+        "concurrentMissions":  10,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  1,
+        "month":  2,
+        "plannedDays":  1.1,
+        "vehicleStatus":  2,
+        "employeeRate":  0.92,
+        "concurrentMissions":  10,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  0,
+        "month":  4,
+        "plannedDays":  14.9,
+        "vehicleStatus":  0,
+        "employeeRate":  0.75,
+        "concurrentMissions":  6,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  5,
+        "month":  6,
+        "plannedDays":  26.8,
+        "vehicleStatus":  2,
+        "employeeRate":  0.22,
+        "concurrentMissions":  6,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  3,
+        "month":  1,
+        "plannedDays":  6.8,
+        "vehicleStatus":  1,
+        "employeeRate":  0.36,
+        "concurrentMissions":  6,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  5,
+        "month":  4,
+        "plannedDays":  14.7,
+        "vehicleStatus":  1,
+        "employeeRate":  0.59,
+        "concurrentMissions":  8,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  1,
+        "month":  8,
+        "plannedDays":  10,
+        "vehicleStatus":  0,
+        "employeeRate":  0.13,
+        "concurrentMissions":  1,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  0,
+        "month":  2,
+        "plannedDays":  21.2,
+        "vehicleStatus":  0,
+        "employeeRate":  0.32,
+        "concurrentMissions":  3,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  6,
+        "month":  6,
+        "plannedDays":  6.9,
+        "vehicleStatus":  2,
+        "employeeRate":  0.36,
+        "concurrentMissions":  2,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  0,
+        "month":  10,
+        "plannedDays":  10.2,
+        "vehicleStatus":  1,
+        "employeeRate":  0.35,
+        "concurrentMissions":  5,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  0,
+        "month":  1,
+        "plannedDays":  22.9,
+        "vehicleStatus":  0,
+        "employeeRate":  0.83,
+        "concurrentMissions":  8,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  6,
+        "month":  8,
+        "plannedDays":  16.3,
+        "vehicleStatus":  0,
+        "employeeRate":  0.45,
+        "concurrentMissions":  7,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  6,
+        "month":  6,
+        "plannedDays":  5.8,
+        "vehicleStatus":  0,
+        "employeeRate":  0.24,
+        "concurrentMissions":  4,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  5,
+        "month":  4,
+        "plannedDays":  24.2,
+        "vehicleStatus":  0,
+        "employeeRate":  0.59,
+        "concurrentMissions":  9,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  5,
+        "month":  12,
+        "plannedDays":  19.6,
+        "vehicleStatus":  2,
+        "employeeRate":  0.62,
+        "concurrentMissions":  0,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  0,
+        "month":  12,
+        "plannedDays":  3.6,
+        "vehicleStatus":  1,
+        "employeeRate":  0.59,
+        "concurrentMissions":  6,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  6,
+        "month":  8,
+        "plannedDays":  21.2,
+        "vehicleStatus":  3,
+        "employeeRate":  0.51,
+        "concurrentMissions":  0,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  2,
+        "month":  2,
+        "plannedDays":  15.9,
+        "vehicleStatus":  0,
+        "employeeRate":  0.07,
+        "concurrentMissions":  3,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  5,
+        "month":  12,
+        "plannedDays":  27.3,
+        "vehicleStatus":  0,
+        "employeeRate":  0.89,
+        "concurrentMissions":  5,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  4,
+        "month":  11,
+        "plannedDays":  9.4,
+        "vehicleStatus":  2,
+        "employeeRate":  0.66,
+        "concurrentMissions":  6,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  3,
+        "month":  1,
+        "plannedDays":  16.3,
+        "vehicleStatus":  1,
+        "employeeRate":  0.82,
+        "concurrentMissions":  8,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  4,
+        "month":  2,
+        "plannedDays":  10,
+        "vehicleStatus":  0,
+        "employeeRate":  0.8,
+        "concurrentMissions":  10,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  5,
+        "month":  2,
+        "plannedDays":  20,
+        "vehicleStatus":  1,
+        "employeeRate":  0.69,
+        "concurrentMissions":  8,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  6,
+        "month":  2,
+        "plannedDays":  8,
+        "vehicleStatus":  1,
+        "employeeRate":  0.12,
+        "concurrentMissions":  0,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  5,
+        "month":  6,
+        "plannedDays":  3,
+        "vehicleStatus":  2,
+        "employeeRate":  0.49,
+        "concurrentMissions":  4,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  0,
+        "month":  12,
+        "plannedDays":  13.7,
+        "vehicleStatus":  0,
+        "employeeRate":  0.56,
+        "concurrentMissions":  3,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  5,
+        "month":  8,
+        "plannedDays":  5.5,
+        "vehicleStatus":  0,
+        "employeeRate":  0.54,
+        "concurrentMissions":  5,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  5,
+        "month":  8,
+        "plannedDays":  8.9,
+        "vehicleStatus":  3,
+        "employeeRate":  0.81,
+        "concurrentMissions":  3,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  6,
+        "month":  4,
+        "plannedDays":  27.7,
+        "vehicleStatus":  1,
+        "employeeRate":  0.78,
+        "concurrentMissions":  6,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  4,
+        "month":  3,
+        "plannedDays":  7.4,
+        "vehicleStatus":  0,
+        "employeeRate":  0.53,
+        "concurrentMissions":  8,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  1,
+        "month":  3,
+        "plannedDays":  9.6,
+        "vehicleStatus":  0,
+        "employeeRate":  0.4,
+        "concurrentMissions":  3,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  3,
+        "month":  2,
+        "plannedDays":  18,
+        "vehicleStatus":  1,
+        "employeeRate":  0.49,
+        "concurrentMissions":  5,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  5,
+        "month":  10,
+        "plannedDays":  25.7,
+        "vehicleStatus":  1,
+        "employeeRate":  0.07,
+        "concurrentMissions":  2,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  4,
+        "month":  7,
+        "plannedDays":  16.3,
+        "vehicleStatus":  2,
+        "employeeRate":  0.72,
+        "concurrentMissions":  3,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  2,
+        "month":  12,
+        "plannedDays":  23,
+        "vehicleStatus":  0,
+        "employeeRate":  0.77,
+        "concurrentMissions":  0,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  2,
+        "month":  12,
+        "plannedDays":  24.5,
+        "vehicleStatus":  0,
+        "employeeRate":  0.07,
+        "concurrentMissions":  4,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  1,
+        "month":  5,
+        "plannedDays":  4.3,
+        "vehicleStatus":  0,
+        "employeeRate":  0.11,
+        "concurrentMissions":  8,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  3,
+        "month":  5,
+        "plannedDays":  18.5,
+        "vehicleStatus":  1,
+        "employeeRate":  0.55,
+        "concurrentMissions":  6,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  5,
+        "month":  10,
+        "plannedDays":  10.7,
+        "vehicleStatus":  1,
+        "employeeRate":  0.99,
+        "concurrentMissions":  10,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  1,
+        "month":  10,
+        "plannedDays":  17.1,
+        "vehicleStatus":  2,
+        "employeeRate":  0.51,
+        "concurrentMissions":  4,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  5,
+        "month":  1,
+        "plannedDays":  8.6,
+        "vehicleStatus":  0,
+        "employeeRate":  0.79,
+        "concurrentMissions":  8,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  1,
+        "month":  6,
+        "plannedDays":  14.8,
+        "vehicleStatus":  1,
+        "employeeRate":  0.5,
+        "concurrentMissions":  3,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  4,
+        "month":  2,
+        "plannedDays":  16.5,
+        "vehicleStatus":  0,
+        "employeeRate":  0.41,
+        "concurrentMissions":  1,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  1,
+        "month":  6,
+        "plannedDays":  21.6,
+        "vehicleStatus":  0,
+        "employeeRate":  0.45,
+        "concurrentMissions":  2,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  3,
+        "month":  7,
+        "plannedDays":  17,
+        "vehicleStatus":  1,
+        "employeeRate":  0.36,
+        "concurrentMissions":  5,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  2,
+        "month":  5,
+        "plannedDays":  13.8,
+        "vehicleStatus":  2,
+        "employeeRate":  0.85,
+        "concurrentMissions":  10,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  2,
+        "month":  11,
+        "plannedDays":  2.7,
+        "vehicleStatus":  1,
+        "employeeRate":  0.69,
+        "concurrentMissions":  2,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  4,
+        "month":  1,
+        "plannedDays":  14.8,
+        "vehicleStatus":  0,
+        "employeeRate":  0.31,
+        "concurrentMissions":  7,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  3,
+        "month":  7,
+        "plannedDays":  26.9,
+        "vehicleStatus":  0,
+        "employeeRate":  0.52,
+        "concurrentMissions":  4,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  6,
+        "month":  12,
+        "plannedDays":  1.5,
+        "vehicleStatus":  0,
+        "employeeRate":  0.8,
+        "concurrentMissions":  2,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  5,
+        "month":  2,
+        "plannedDays":  13.9,
+        "vehicleStatus":  1,
+        "employeeRate":  0.13,
+        "concurrentMissions":  1,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  4,
+        "month":  9,
+        "plannedDays":  17.2,
+        "vehicleStatus":  2,
+        "employeeRate":  1,
+        "concurrentMissions":  5,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  3,
+        "month":  1,
+        "plannedDays":  15,
+        "vehicleStatus":  0,
+        "employeeRate":  0.76,
+        "concurrentMissions":  0,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  5,
+        "month":  7,
+        "plannedDays":  12.9,
+        "vehicleStatus":  0,
+        "employeeRate":  0.58,
+        "concurrentMissions":  10,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  6,
+        "month":  1,
+        "plannedDays":  11,
+        "vehicleStatus":  3,
+        "employeeRate":  0.97,
+        "concurrentMissions":  3,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  6,
+        "month":  1,
+        "plannedDays":  16.1,
+        "vehicleStatus":  0,
+        "employeeRate":  0.61,
+        "concurrentMissions":  7,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  5,
+        "month":  5,
+        "plannedDays":  17.2,
+        "vehicleStatus":  1,
+        "employeeRate":  0.94,
+        "concurrentMissions":  8,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  5,
+        "month":  7,
+        "plannedDays":  3.6,
+        "vehicleStatus":  0,
+        "employeeRate":  0.23,
+        "concurrentMissions":  5,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  3,
+        "month":  1,
+        "plannedDays":  7.5,
+        "vehicleStatus":  1,
+        "employeeRate":  0.18,
+        "concurrentMissions":  4,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  4,
+        "month":  3,
+        "plannedDays":  25.4,
+        "vehicleStatus":  0,
+        "employeeRate":  0.19,
+        "concurrentMissions":  0,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  0,
+        "month":  12,
+        "plannedDays":  25.5,
+        "vehicleStatus":  0,
+        "employeeRate":  0.31,
+        "concurrentMissions":  9,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  1,
+        "month":  11,
+        "plannedDays":  23.5,
+        "vehicleStatus":  1,
+        "employeeRate":  0.16,
+        "concurrentMissions":  0,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  3,
+        "month":  4,
+        "plannedDays":  24.7,
+        "vehicleStatus":  2,
+        "employeeRate":  0.75,
+        "concurrentMissions":  9,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  6,
+        "month":  4,
+        "plannedDays":  18.3,
+        "vehicleStatus":  0,
+        "employeeRate":  0.29,
+        "concurrentMissions":  2,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  0,
+        "month":  9,
+        "plannedDays":  14.9,
+        "vehicleStatus":  2,
+        "employeeRate":  0.77,
+        "concurrentMissions":  8,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  3,
+        "month":  3,
+        "plannedDays":  26.1,
+        "vehicleStatus":  3,
+        "employeeRate":  0.69,
+        "concurrentMissions":  0,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  1,
+        "month":  6,
+        "plannedDays":  26.7,
+        "vehicleStatus":  0,
+        "employeeRate":  0.35,
+        "concurrentMissions":  6,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  6,
+        "month":  1,
+        "plannedDays":  9,
+        "vehicleStatus":  1,
+        "employeeRate":  0.13,
+        "concurrentMissions":  2,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  4,
+        "month":  4,
+        "plannedDays":  21.1,
+        "vehicleStatus":  0,
+        "employeeRate":  0.65,
+        "concurrentMissions":  8,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  0,
+        "month":  4,
+        "plannedDays":  26.1,
+        "vehicleStatus":  0,
+        "employeeRate":  0.31,
+        "concurrentMissions":  3,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  0,
+        "month":  12,
+        "plannedDays":  24.1,
+        "vehicleStatus":  0,
+        "employeeRate":  0.85,
+        "concurrentMissions":  10,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  6,
+        "month":  9,
+        "plannedDays":  12.2,
+        "vehicleStatus":  3,
+        "employeeRate":  0.57,
+        "concurrentMissions":  1,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  4,
+        "month":  3,
+        "plannedDays":  9.5,
+        "vehicleStatus":  1,
+        "employeeRate":  0.52,
+        "concurrentMissions":  8,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  6,
+        "month":  3,
+        "plannedDays":  26.1,
+        "vehicleStatus":  0,
+        "employeeRate":  0.28,
+        "concurrentMissions":  3,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  0,
+        "month":  1,
+        "plannedDays":  18.9,
+        "vehicleStatus":  0,
+        "employeeRate":  0.35,
+        "concurrentMissions":  1,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  0,
+        "month":  6,
+        "plannedDays":  11.4,
+        "vehicleStatus":  0,
+        "employeeRate":  0.27,
+        "concurrentMissions":  2,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  3,
+        "month":  4,
+        "plannedDays":  3.2,
+        "vehicleStatus":  0,
+        "employeeRate":  0.63,
+        "concurrentMissions":  9,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  0,
+        "month":  8,
+        "plannedDays":  22.1,
+        "vehicleStatus":  2,
+        "employeeRate":  0.53,
+        "concurrentMissions":  0,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  5,
+        "month":  12,
+        "plannedDays":  2,
+        "vehicleStatus":  1,
+        "employeeRate":  0.64,
+        "concurrentMissions":  8,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  4,
+        "month":  10,
+        "plannedDays":  26.3,
+        "vehicleStatus":  0,
+        "employeeRate":  0.97,
+        "concurrentMissions":  2,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  5,
+        "month":  12,
+        "plannedDays":  10.8,
+        "vehicleStatus":  0,
+        "employeeRate":  0.52,
+        "concurrentMissions":  1,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  6,
+        "month":  10,
+        "plannedDays":  27.5,
+        "vehicleStatus":  1,
+        "employeeRate":  0.44,
+        "concurrentMissions":  6,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  3,
+        "month":  11,
+        "plannedDays":  8.1,
+        "vehicleStatus":  2,
+        "employeeRate":  0.09,
+        "concurrentMissions":  9,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  3,
+        "month":  5,
+        "plannedDays":  20.9,
+        "vehicleStatus":  1,
+        "employeeRate":  0.48,
+        "concurrentMissions":  0,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  3,
+        "month":  3,
+        "plannedDays":  25.3,
+        "vehicleStatus":  1,
+        "employeeRate":  0.64,
+        "concurrentMissions":  9,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  4,
+        "month":  5,
+        "plannedDays":  16,
+        "vehicleStatus":  0,
+        "employeeRate":  0.91,
+        "concurrentMissions":  7,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  0,
+        "month":  2,
+        "plannedDays":  26.8,
+        "vehicleStatus":  0,
+        "employeeRate":  0.18,
+        "concurrentMissions":  8,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  6,
+        "month":  8,
+        "plannedDays":  12.3,
+        "vehicleStatus":  3,
+        "employeeRate":  0.42,
+        "concurrentMissions":  3,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  4,
+        "month":  8,
+        "plannedDays":  18.3,
+        "vehicleStatus":  0,
+        "employeeRate":  0.14,
+        "concurrentMissions":  5,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  4,
+        "month":  1,
+        "plannedDays":  28.7,
+        "vehicleStatus":  2,
+        "employeeRate":  0.73,
+        "concurrentMissions":  7,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  3,
+        "month":  9,
+        "plannedDays":  23.5,
+        "vehicleStatus":  0,
+        "employeeRate":  0.14,
+        "concurrentMissions":  4,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  1,
+        "month":  10,
+        "plannedDays":  13,
+        "vehicleStatus":  0,
+        "employeeRate":  0.28,
+        "concurrentMissions":  7,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  3,
+        "month":  6,
+        "plannedDays":  23.1,
+        "vehicleStatus":  0,
+        "employeeRate":  0.56,
+        "concurrentMissions":  1,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  5,
+        "month":  12,
+        "plannedDays":  28.2,
+        "vehicleStatus":  2,
+        "employeeRate":  0.17,
+        "concurrentMissions":  6,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  0,
+        "month":  12,
+        "plannedDays":  12.5,
+        "vehicleStatus":  1,
+        "employeeRate":  0.04,
+        "concurrentMissions":  5,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  6,
+        "month":  8,
+        "plannedDays":  20.2,
+        "vehicleStatus":  0,
+        "employeeRate":  0.91,
+        "concurrentMissions":  8,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  5,
+        "month":  3,
+        "plannedDays":  21.8,
+        "vehicleStatus":  3,
+        "employeeRate":  0.87,
+        "concurrentMissions":  6,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  4,
+        "month":  3,
+        "plannedDays":  17.1,
+        "vehicleStatus":  0,
+        "employeeRate":  0.57,
+        "concurrentMissions":  7,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  5,
+        "month":  10,
+        "plannedDays":  12.6,
+        "vehicleStatus":  3,
+        "employeeRate":  0.78,
+        "concurrentMissions":  10,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  6,
+        "month":  1,
+        "plannedDays":  24.7,
+        "vehicleStatus":  0,
+        "employeeRate":  0.16,
+        "concurrentMissions":  3,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  6,
+        "month":  2,
+        "plannedDays":  27.3,
+        "vehicleStatus":  1,
+        "employeeRate":  0.32,
+        "concurrentMissions":  7,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  5,
+        "month":  3,
+        "plannedDays":  26.6,
+        "vehicleStatus":  0,
+        "employeeRate":  0.99,
+        "concurrentMissions":  3,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  5,
+        "month":  11,
+        "plannedDays":  9.1,
+        "vehicleStatus":  1,
+        "employeeRate":  0.78,
+        "concurrentMissions":  7,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  5,
+        "month":  4,
+        "plannedDays":  9.7,
+        "vehicleStatus":  0,
+        "employeeRate":  0.83,
+        "concurrentMissions":  1,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  1,
+        "month":  11,
+        "plannedDays":  18.5,
+        "vehicleStatus":  1,
+        "employeeRate":  0.35,
+        "concurrentMissions":  5,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  0,
+        "month":  8,
+        "plannedDays":  15.3,
+        "vehicleStatus":  0,
+        "employeeRate":  0.99,
+        "concurrentMissions":  8,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  4,
+        "month":  6,
+        "plannedDays":  19.7,
+        "vehicleStatus":  2,
+        "employeeRate":  0.62,
+        "concurrentMissions":  9,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  1,
+        "month":  7,
+        "plannedDays":  22.3,
+        "vehicleStatus":  0,
+        "employeeRate":  0.59,
+        "concurrentMissions":  4,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  5,
+        "month":  8,
+        "plannedDays":  15.6,
+        "vehicleStatus":  1,
+        "employeeRate":  0.6,
+        "concurrentMissions":  10,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  2,
+        "month":  4,
+        "plannedDays":  17.6,
+        "vehicleStatus":  1,
+        "employeeRate":  0.8,
+        "concurrentMissions":  7,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  1,
+        "month":  10,
+        "plannedDays":  7.3,
+        "vehicleStatus":  2,
+        "employeeRate":  0.89,
+        "concurrentMissions":  0,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  5,
+        "month":  8,
+        "plannedDays":  10.6,
+        "vehicleStatus":  0,
+        "employeeRate":  0.28,
+        "concurrentMissions":  9,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  2,
+        "month":  11,
+        "plannedDays":  10.1,
+        "vehicleStatus":  2,
+        "employeeRate":  0.09,
+        "concurrentMissions":  7,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  0,
+        "month":  12,
+        "plannedDays":  22.2,
+        "vehicleStatus":  0,
+        "employeeRate":  0.87,
+        "concurrentMissions":  5,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  1,
+        "month":  1,
+        "plannedDays":  5.2,
+        "vehicleStatus":  2,
+        "employeeRate":  0.2,
+        "concurrentMissions":  5,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  5,
+        "month":  7,
+        "plannedDays":  17.6,
+        "vehicleStatus":  1,
+        "employeeRate":  0.38,
+        "concurrentMissions":  10,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  6,
+        "month":  3,
+        "plannedDays":  8.8,
+        "vehicleStatus":  0,
+        "employeeRate":  0.06,
+        "concurrentMissions":  6,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  2,
+        "month":  4,
+        "plannedDays":  25.7,
+        "vehicleStatus":  2,
+        "employeeRate":  0.97,
+        "concurrentMissions":  4,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  5,
+        "month":  6,
+        "plannedDays":  12.3,
+        "vehicleStatus":  0,
+        "employeeRate":  0.56,
+        "concurrentMissions":  9,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  3,
+        "month":  3,
+        "plannedDays":  11.9,
+        "vehicleStatus":  0,
+        "employeeRate":  0.37,
+        "concurrentMissions":  0,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  2,
+        "month":  9,
+        "plannedDays":  2.6,
+        "vehicleStatus":  1,
+        "employeeRate":  0.74,
+        "concurrentMissions":  2,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  5,
+        "month":  6,
+        "plannedDays":  2.9,
+        "vehicleStatus":  2,
+        "employeeRate":  0.94,
+        "concurrentMissions":  2,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  5,
+        "month":  4,
+        "plannedDays":  4,
+        "vehicleStatus":  0,
+        "employeeRate":  0.12,
+        "concurrentMissions":  8,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  0,
+        "month":  3,
+        "plannedDays":  20,
+        "vehicleStatus":  2,
+        "employeeRate":  0.03,
+        "concurrentMissions":  5,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  6,
+        "month":  11,
+        "plannedDays":  7.9,
+        "vehicleStatus":  1,
+        "employeeRate":  0.57,
+        "concurrentMissions":  4,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  3,
+        "month":  10,
+        "plannedDays":  1.2,
+        "vehicleStatus":  0,
+        "employeeRate":  0.16,
+        "concurrentMissions":  1,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  6,
+        "month":  5,
+        "plannedDays":  7.1,
+        "vehicleStatus":  1,
+        "employeeRate":  0.63,
+        "concurrentMissions":  8,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  6,
+        "month":  4,
+        "plannedDays":  24.7,
+        "vehicleStatus":  0,
+        "employeeRate":  0.2,
+        "concurrentMissions":  6,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  3,
+        "month":  5,
+        "plannedDays":  26,
+        "vehicleStatus":  1,
+        "employeeRate":  0.71,
+        "concurrentMissions":  6,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  4,
+        "month":  10,
+        "plannedDays":  4.2,
+        "vehicleStatus":  0,
+        "employeeRate":  0.83,
+        "concurrentMissions":  7,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  3,
+        "month":  2,
+        "plannedDays":  28.9,
+        "vehicleStatus":  3,
+        "employeeRate":  0.63,
+        "concurrentMissions":  0,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  6,
+        "month":  6,
+        "plannedDays":  6.3,
+        "vehicleStatus":  0,
+        "employeeRate":  0.71,
+        "concurrentMissions":  7,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  4,
+        "month":  5,
+        "plannedDays":  13.3,
+        "vehicleStatus":  0,
+        "employeeRate":  0.88,
+        "concurrentMissions":  9,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  3,
+        "month":  2,
+        "plannedDays":  15.6,
+        "vehicleStatus":  1,
+        "employeeRate":  0.56,
+        "concurrentMissions":  1,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  3,
+        "month":  2,
+        "plannedDays":  8.3,
+        "vehicleStatus":  2,
+        "employeeRate":  0.1,
+        "concurrentMissions":  5,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  1,
+        "month":  11,
+        "plannedDays":  9,
+        "vehicleStatus":  1,
+        "employeeRate":  0.55,
+        "concurrentMissions":  2,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  6,
+        "month":  9,
+        "plannedDays":  9.7,
+        "vehicleStatus":  0,
+        "employeeRate":  0.95,
+        "concurrentMissions":  8,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  2,
+        "month":  9,
+        "plannedDays":  28.9,
+        "vehicleStatus":  3,
+        "employeeRate":  0.85,
+        "concurrentMissions":  3,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  6,
+        "month":  6,
+        "plannedDays":  15.4,
+        "vehicleStatus":  0,
+        "employeeRate":  0.86,
+        "concurrentMissions":  7,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  2,
+        "month":  12,
+        "plannedDays":  18,
+        "vehicleStatus":  1,
+        "employeeRate":  0.17,
+        "concurrentMissions":  6,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  3,
+        "month":  2,
+        "plannedDays":  23.2,
+        "vehicleStatus":  0,
+        "employeeRate":  0.65,
+        "concurrentMissions":  3,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  2,
+        "month":  3,
+        "plannedDays":  13.5,
+        "vehicleStatus":  1,
+        "employeeRate":  0.39,
+        "concurrentMissions":  4,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  2,
+        "month":  4,
+        "plannedDays":  24.7,
+        "vehicleStatus":  0,
+        "employeeRate":  0.2,
+        "concurrentMissions":  5,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  2,
+        "month":  10,
+        "plannedDays":  15.3,
+        "vehicleStatus":  1,
+        "employeeRate":  0.51,
+        "concurrentMissions":  3,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  5,
+        "month":  9,
+        "plannedDays":  11.8,
+        "vehicleStatus":  2,
+        "employeeRate":  0.2,
+        "concurrentMissions":  6,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  3,
+        "month":  3,
+        "plannedDays":  18.4,
+        "vehicleStatus":  0,
+        "employeeRate":  0.97,
+        "concurrentMissions":  4,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  1,
+        "month":  1,
+        "plannedDays":  13.7,
+        "vehicleStatus":  1,
+        "employeeRate":  0.25,
+        "concurrentMissions":  2,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  4,
+        "month":  10,
+        "plannedDays":  11.4,
+        "vehicleStatus":  3,
+        "employeeRate":  0.06,
+        "concurrentMissions":  2,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  2,
+        "month":  4,
+        "plannedDays":  18.8,
+        "vehicleStatus":  0,
+        "employeeRate":  0.98,
+        "concurrentMissions":  10,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  3,
+        "month":  1,
+        "plannedDays":  24.3,
+        "vehicleStatus":  0,
+        "employeeRate":  0.86,
+        "concurrentMissions":  2,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  0,
+        "month":  3,
+        "plannedDays":  2.2,
+        "vehicleStatus":  0,
+        "employeeRate":  0.05,
+        "concurrentMissions":  6,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  4,
+        "month":  1,
+        "plannedDays":  7.4,
+        "vehicleStatus":  0,
+        "employeeRate":  0.07,
+        "concurrentMissions":  6,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  6,
+        "month":  1,
+        "plannedDays":  23.9,
+        "vehicleStatus":  0,
+        "employeeRate":  0.33,
+        "concurrentMissions":  7,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  6,
+        "month":  12,
+        "plannedDays":  2.9,
+        "vehicleStatus":  3,
+        "employeeRate":  0.48,
+        "concurrentMissions":  10,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  0,
+        "month":  8,
+        "plannedDays":  8.5,
+        "vehicleStatus":  0,
+        "employeeRate":  0.05,
+        "concurrentMissions":  0,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  3,
+        "month":  4,
+        "plannedDays":  21.4,
+        "vehicleStatus":  0,
+        "employeeRate":  0.59,
+        "concurrentMissions":  0,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  1,
+        "month":  5,
+        "plannedDays":  25.6,
+        "vehicleStatus":  3,
+        "employeeRate":  0.36,
+        "concurrentMissions":  5,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  0,
+        "month":  1,
+        "plannedDays":  2.8,
+        "vehicleStatus":  1,
+        "employeeRate":  0.51,
+        "concurrentMissions":  8,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  1,
+        "month":  12,
+        "plannedDays":  7.8,
+        "vehicleStatus":  1,
+        "employeeRate":  0.7,
+        "concurrentMissions":  3,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  3,
+        "month":  12,
+        "plannedDays":  25.2,
+        "vehicleStatus":  0,
+        "employeeRate":  0.59,
+        "concurrentMissions":  5,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  4,
+        "month":  2,
+        "plannedDays":  4.2,
+        "vehicleStatus":  2,
+        "employeeRate":  0.64,
+        "concurrentMissions":  5,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  4,
+        "month":  3,
+        "plannedDays":  3.4,
+        "vehicleStatus":  0,
+        "employeeRate":  0.39,
+        "concurrentMissions":  2,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  4,
+        "month":  3,
+        "plannedDays":  25.2,
+        "vehicleStatus":  1,
+        "employeeRate":  0.27,
+        "concurrentMissions":  5,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  2,
+        "month":  6,
+        "plannedDays":  13.4,
+        "vehicleStatus":  3,
+        "employeeRate":  0.7,
+        "concurrentMissions":  10,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  3,
+        "month":  1,
+        "plannedDays":  25.9,
+        "vehicleStatus":  2,
+        "employeeRate":  0.03,
+        "concurrentMissions":  1,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  6,
+        "month":  12,
+        "plannedDays":  23,
+        "vehicleStatus":  3,
+        "employeeRate":  0.3,
+        "concurrentMissions":  4,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  5,
+        "month":  2,
+        "plannedDays":  13.6,
+        "vehicleStatus":  0,
+        "employeeRate":  0.17,
+        "concurrentMissions":  8,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  5,
+        "month":  12,
+        "plannedDays":  14.2,
+        "vehicleStatus":  0,
+        "employeeRate":  0.03,
+        "concurrentMissions":  1,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  4,
+        "month":  9,
+        "plannedDays":  24.9,
+        "vehicleStatus":  3,
+        "employeeRate":  0.49,
+        "concurrentMissions":  10,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  1,
+        "month":  3,
+        "plannedDays":  10.8,
+        "vehicleStatus":  0,
+        "employeeRate":  0.04,
+        "concurrentMissions":  6,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  1,
+        "month":  1,
+        "plannedDays":  20,
+        "vehicleStatus":  3,
+        "employeeRate":  0.03,
+        "concurrentMissions":  6,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  2,
+        "month":  12,
+        "plannedDays":  17.1,
+        "vehicleStatus":  1,
+        "employeeRate":  0.23,
+        "concurrentMissions":  10,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  0,
+        "month":  6,
+        "plannedDays":  13.6,
+        "vehicleStatus":  0,
+        "employeeRate":  0.05,
+        "concurrentMissions":  0,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  1,
+        "month":  12,
+        "plannedDays":  26.9,
+        "vehicleStatus":  2,
+        "employeeRate":  0.52,
+        "concurrentMissions":  5,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  6,
+        "month":  2,
+        "plannedDays":  27.7,
+        "vehicleStatus":  0,
+        "employeeRate":  0.16,
+        "concurrentMissions":  1,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  6,
+        "month":  10,
+        "plannedDays":  10.7,
+        "vehicleStatus":  3,
+        "employeeRate":  0.48,
+        "concurrentMissions":  8,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  4,
+        "month":  4,
+        "plannedDays":  12.4,
+        "vehicleStatus":  0,
+        "employeeRate":  0.95,
+        "concurrentMissions":  4,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  5,
+        "month":  11,
+        "plannedDays":  11,
+        "vehicleStatus":  3,
+        "employeeRate":  0.55,
+        "concurrentMissions":  3,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  1,
+        "month":  10,
+        "plannedDays":  5.8,
+        "vehicleStatus":  1,
+        "employeeRate":  0.1,
+        "concurrentMissions":  10,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  6,
+        "month":  8,
+        "plannedDays":  12.3,
+        "vehicleStatus":  0,
+        "employeeRate":  0.81,
+        "concurrentMissions":  2,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  4,
+        "month":  2,
+        "plannedDays":  1.1,
+        "vehicleStatus":  1,
+        "employeeRate":  0.28,
+        "concurrentMissions":  0,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  4,
+        "month":  7,
+        "plannedDays":  16,
+        "vehicleStatus":  1,
+        "employeeRate":  0.1,
+        "concurrentMissions":  5,
+        "label":  1
+    },
+    {
+        "dayOfWeek":  1,
+        "month":  8,
+        "plannedDays":  5,
+        "vehicleStatus":  1,
+        "employeeRate":  0.8,
+        "concurrentMissions":  5,
+        "label":  0
+    },
+    {
+        "dayOfWeek":  0,
+        "month":  3,
+        "plannedDays":  14.6,
+        "vehicleStatus":  0,
+        "employeeRate":  0.79,
+        "concurrentMissions":  9,
+        "label":  0
+    }
+]

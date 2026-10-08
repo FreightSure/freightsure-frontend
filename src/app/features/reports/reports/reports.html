@@ -1,0 +1,172 @@
+<div class="page">
+
+  <!-- Header -->
+  <div class="page-header">
+    <div>
+      <h1>📈 Monthly Reports</h1>
+      <p>Performance summary across missions and deliveries.</p>
+    </div>
+    <div class="header-actions">
+      <div class="period-selector">
+        <span>Period:</span>
+        @for (opt of monthOptions; track opt) {
+          <button class="period-btn" [class.active]="selectedMonths === opt" (click)="selectedMonths = opt">
+            {{ opt }}M
+          </button>
+        }
+      </div>
+      <button class="btn-export" (click)="exportCSV()">📄 Export CSV</button>
+      <button class="btn-export btn-pdf" (click)="exportPdf()">📋 Export PDF</button>
+    </div>
+  </div>
+
+  <!-- KPI Overview Cards -->
+  <div class="stats-grid">
+    <div class="stat-card">
+      <div class="stat-icon blue">📋</div>
+      <div class="stat-content">
+        <span class="stat-label">Total Missions</span>
+        <strong>{{ totalMissions }}</strong>
+      </div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon green">✓</div>
+      <div class="stat-content">
+        <span class="stat-label">Completed</span>
+        <strong>{{ totalCompleted }}</strong>
+      </div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon purple">%</div>
+      <div class="stat-content">
+        <span class="stat-label">Avg Completion</span>
+        <strong>{{ avgCompletion }}%</strong>
+      </div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon orange">📦</div>
+      <div class="stat-content">
+        <span class="stat-label">Deliveries</span>
+        <strong>{{ totalDeliveries }}</strong>
+      </div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon green">🚚</div>
+      <div class="stat-content">
+        <span class="stat-label">Delivered</span>
+        <strong>{{ totalDelivered }}</strong>
+      </div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon red">✗</div>
+      <div class="stat-content">
+        <span class="stat-label">Cancelled</span>
+        <strong>{{ totalCancelled }}</strong>
+      </div>
+    </div>
+  </div>
+
+  <!-- Monthly Breakdown Table -->
+  <div class="main-card">
+    <div class="card-header">
+      <div>
+        <h2>Monthly Breakdown</h2>
+        <p>Last {{ selectedMonths }} months — {{ monthlyRows.length }} periods</p>
+      </div>
+    </div>
+
+    @if (isLoading) {
+      <div class="loading-state">Loading report data...</div>
+    } @else {
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Month</th>
+              <th>Missions</th>
+              <th>Completed</th>
+              <th>Cancelled</th>
+              <th>Completion Rate</th>
+              <th>Deliveries</th>
+              <th>Delivered</th>
+              <th>Activity</th>
+            </tr>
+          </thead>
+          <tbody>
+            @for (row of monthlyRows; track row.monthLabel) {
+              <tr>
+                <td><strong>{{ row.monthLabel }}</strong></td>
+                <td>{{ row.missions }}</td>
+                <td>
+                  <span class="badge badge-green">{{ row.completed }}</span>
+                </td>
+                <td>
+                  <span class="badge badge-red">{{ row.cancelled }}</span>
+                </td>
+                <td>
+                  <div class="completion-cell">
+                    <div class="mini-bar-track">
+                      <div class="mini-bar-fill"
+                           [class.high]="row.completionRate >= 75"
+                           [class.mid]="row.completionRate >= 40 && row.completionRate < 75"
+                           [class.low]="row.completionRate < 40"
+                           [style.width.%]="row.completionRate">
+                      </div>
+                    </div>
+                    <span class="pct-label">{{ row.completionRate }}%</span>
+                  </div>
+                </td>
+                <td>{{ row.deliveries }}</td>
+                <td>
+                  <span class="badge badge-blue">{{ row.delivered }}</span>
+                </td>
+                <td>
+                  <div class="activity-bar">
+                    <div class="activity-fill" [style.width.%]="barWidth(row.missions, maxMissions())"></div>
+                  </div>
+                </td>
+              </tr>
+            }
+            <!-- Totals row -->
+            <tr class="totals-row">
+              <td><strong>TOTAL</strong></td>
+              <td><strong>{{ totalMissions }}</strong></td>
+              <td><strong>{{ totalCompleted }}</strong></td>
+              <td><strong>{{ totalCancelled }}</strong></td>
+              <td><strong>{{ avgCompletion }}% avg</strong></td>
+              <td><strong>{{ totalDeliveries }}</strong></td>
+              <td><strong>{{ totalDelivered }}</strong></td>
+              <td>—</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Fleet & Team Snapshot -->
+      <div class="snapshot-bar">
+        <div class="snapshot-item">
+          <span class="snap-icon">🚛</span>
+          <div>
+            <div class="snap-label">Available Vehicles</div>
+            <div class="snap-value">{{ activeVehicles }} / {{ vehicles.length }}</div>
+          </div>
+        </div>
+        <div class="snapshot-item">
+          <span class="snap-icon">👤</span>
+          <div>
+            <div class="snap-label">Active Employees</div>
+            <div class="snap-value">{{ activeEmployees }} / {{ employees.length }}</div>
+          </div>
+        </div>
+        <div class="snapshot-item">
+          <span class="snap-icon">📊</span>
+          <div>
+            <div class="snap-label">Delivery Success Rate</div>
+            <div class="snap-value">{{ totalDeliveries > 0 ? (totalDelivered * 100 / totalDeliveries | number:'1.0-0') : 0 }}%</div>
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+
+</div>

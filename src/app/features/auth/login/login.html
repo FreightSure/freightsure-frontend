@@ -1,0 +1,159 @@
+<div class="login-page">
+
+  <div class="login-container">
+
+    <!-- LEFT SIDE -->
+    <div class="login-brand">
+
+      <div class="brand-logo">
+        FS
+      </div>
+
+      <h1>FreightSure</h1>
+
+      <p class="brand-subtitle">
+        Fleet Management
+      </p>
+
+      <div class="brand-description">
+        <h2>Manage your fleet<br>with confidence.</h2>
+
+        <p>
+          Monitor vehicles, manage missions,
+          track deliveries and keep your operations
+          running smoothly.
+        </p>
+      </div>
+
+    </div>
+
+
+    <!-- RIGHT SIDE -->
+    <div class="login-form-container">
+
+      <div class="login-form">
+
+        <div class="mobile-logo">
+          FS
+        </div>
+
+        <h2>Welcome back</h2>
+
+        <p class="login-subtitle">
+          Sign in to your FreightSure account
+        </p>
+
+
+        <!-- ERROR -->
+        @if (errorMessage) {
+
+          <div class="error-message">
+            {{ errorMessage }}
+          </div>
+
+        }
+
+
+        <!-- EMAIL -->
+        <div class="form-group">
+
+          <label for="email">
+            Email address
+          </label>
+
+          <input
+            id="email"
+            type="email"
+            name="email"
+            [(ngModel)]="email"
+            placeholder="admin@freightsure.com"
+            autocomplete="email"
+          />
+
+        </div>
+
+
+        <!-- PASSWORD -->
+        <div class="form-group">
+
+          <div class="password-label">
+
+            <label for="password">
+              Password
+            </label>
+
+            <a href="#">
+              Forgot password?
+            </a>
+
+          </div>
+
+          <input
+            id="password"
+            type="password"
+            name="password"
+            [(ngModel)]="password"
+            placeholder="Enter your password"
+            autocomplete="current-password"
+          />
+
+        </div>
+
+
+        <!-- LOGIN BUTTON -->
+        <button
+          type="button"
+          class="login-button"
+          (click)="login()"
+          [disabled]="isLoading"
+        >
+
+          @if (isLoading) {
+
+            <span>Signing in...</span>
+
+          } @else {
+
+            <span>Sign in</span>
+
+          }
+
+        </button>
+
+
+        <!-- SIGN UP LINK -->
+        <div class="signup-link">
+
+          <span>
+            Don't have an account?
+          </span>
+
+          <button
+            type="button"
+            (click)="goToSignup()"
+          >
+            Create account
+          </button>
+
+        </div>
+
+
+        <!-- FOOTER -->
+        <div class="login-footer">
+
+          <span>FreightSure</span>
+
+          <span>•</span>
+
+          <span>Fleet Management Platform</span>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

@@ -1,0 +1,168 @@
+<div class="page">
+
+  <!-- PAGE HEADER -->
+  <div class="page-header">
+    <div>
+      <h1>Vehicle Tracking</h1>
+      <p>Monitor GPS positions of vehicles during missions.</p>
+    </div>
+    <div class="header-actions">
+      <button class="btn-map-toggle" (click)="showMap = !showMap">
+        {{ showMap ? '🗺 Hide Map' : '🗺 Show Map' }}
+      </button>
+      @if (auth.isAdmin()) {
+        <button type="button" class="add-button" (click)="openAddModal()">
+          <span>+</span> Add Tracking Point
+        </button>
+      }
+    </div>
+  </div>
+
+  <!-- MAP -->
+  @if (showMap) {
+    <div style="margin-bottom: 24px;">
+      <app-tracking-map [markers]="mapMarkers" />
+    </div>
+  }
+
+  <!-- MAIN CARD -->
+  <div class="main-card">
+    <div class="card-header">
+      <div><h2>Tracking Records</h2><p>GPS logs — {{ filteredTrackings.length }} total</p></div>
+      <div class="filter-bar">
+        <div class="search-box">
+          <span>🔍</span>
+          <input type="text" [(ngModel)]="searchTerm" placeholder="Search by vehicle or mission..." (ngModelChange)="currentPage = 1" />
+        </div>
+      </div>
+    </div>
+
+    <div class="table-container">
+      @if (isLoading) {
+        <div class="loading-state">Loading tracking data...</div>
+      } @else {
+        <table>
+          <thead>
+            <tr>
+              <th>Vehicle</th>
+              <th>Mission</th>
+              <th>Latitude</th>
+              <th>Longitude</th>
+              <th>Date</th>
+              @if (auth.isAdmin()) { <th>Actions</th> }
+            </tr>
+          </thead>
+          <tbody>
+            @for (t of pagedTrackings; track t.id) {
+              <tr>
+                <td><strong>{{ getVehicleLabel(t.vehicleId) }}</strong></td>
+                <td><small>{{ getMissionLabel(t.missionId) }}</small></td>
+                <td>{{ t.latitude | number:'1.4-4' }}</td>
+                <td>{{ t.longitude | number:'1.4-4' }}</td>
+                <td>{{ t.trackingDate | date:'dd/MM/yyyy HH:mm' }}</td>
+                @if (auth.isAdmin()) {
+                  <td>
+                    <div class="actions">
+                      <button type="button" class="action-button edit" (click)="openEditModal(t)" title="Edit">✎</button>
+                      <button type="button" class="action-button delete" (click)="confirmDelete(t)" title="Delete">×</button>
+                    </div>
+                  </td>
+                }
+              </tr>
+            }
+            @if (filteredTrackings.length === 0 && !isLoading) {
+              <tr><td [attr.colspan]="auth.isAdmin() ? 6 : 5">
+                <div class="empty-state"><span>📍</span><h3>No tracking records found</h3></div>
+              </td></tr>
+            }
+          </tbody>
+        </table>
+
+        <!-- PAGINATION -->
+        <app-pagination
+          [totalItems]="filteredTrackings.length"
+          [pageSize]="pageSize"
+          [currentPage]="currentPage"
+          (pageChange)="onPageChange($event)"
+          (pageSizeChange)="onPageSizeChange($event)"
+        />
+      }
+    </div>
+  </div>
+
+</div>
+
+<!-- ADD / EDIT MODAL (Admin only) -->
+@if (showModal && auth.isAdmin()) {
+  <div class="modal-overlay" (click)="closeModal()">
+    <div class="modal" (click)="$event.stopPropagation()">
+      <div class="modal-header">
+        <h3>{{ isEditing ? '✎ Edit Tracking' : '+ Add Tracking Point' }}</h3>
+        <button type="button" class="modal-close" (click)="closeModal()">×</button>
+      </div>
+      <div class="modal-body">
+        @if (submitError) { <div class="error-banner">{{ submitError }}</div> }
+        <div class="form-row">
+          <div class="form-group">
+            <label>Vehicle</label>
+            <select [(ngModel)]="form.vehicleId">
+              <option value="">-- Select vehicle --</option>
+              @for (v of vehicles; track v.id) {
+                <option [ngValue]="v.id">{{ v.immatriculation }} ({{ v.marque }})</option>
+              }
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Mission</label>
+            <select [(ngModel)]="form.missionId">
+              <option value="">-- Select mission --</option>
+              @for (m of missions; track m.id) {
+                <option [ngValue]="m.id">{{ m.origine }} → {{ m.destination }}</option>
+              }
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Latitude</label>
+            <input type="number" step="0.0001" [(ngModel)]="form.latitude" placeholder="36.8065" />
+          </div>
+          <div class="form-group">
+            <label>Longitude</label>
+            <input type="number" step="0.0001" [(ngModel)]="form.longitude" placeholder="10.1815" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Tracking Date</label>
+          <input type="date" [(ngModel)]="form.trackingDate" />
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn-cancel" (click)="closeModal()">Cancel</button>
+        <button type="button" class="btn-save" (click)="submitForm()" [disabled]="isSubmitting">
+          {{ isSubmitting ? 'Saving...' : (isEditing ? 'Update' : 'Add Point') }}
+        </button>
+      </div>
+    </div>
+  </div>
+}
+
+<!-- DELETE CONFIRM (Admin only) -->
+@if (deleteConfirmId && auth.isAdmin()) {
+  <div class="modal-overlay" (click)="cancelDelete()">
+    <div class="modal modal-sm" (click)="$event.stopPropagation()">
+      <div class="modal-header">
+        <h3>🗑 Delete Tracking</h3>
+        <button type="button" class="modal-close" (click)="cancelDelete()">×</button>
+      </div>
+      <div class="modal-body">
+        <p>Delete tracking record <strong>{{ deleteConfirmName }}</strong>?</p>
+        <p style="margin-top:8px;font-size:12px;color:#dc2626">⚠ This action cannot be undone.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn-cancel" (click)="cancelDelete()">Cancel</button>
+        <button type="button" class="btn-delete" (click)="deleteTracking()">Delete</button>
+      </div>
+    </div>
+  </div>
+}

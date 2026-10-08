@@ -1,0 +1,182 @@
+/* ── Dashboard Layout ─────────────────────────────────── */
+.dashboard { padding: 28px; max-width: 1400px; }
+
+.dash-header {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 28px;
+}
+.dash-title  { font-size: 26px; font-weight: 700; color: #1f2937; margin: 0; }
+.dash-subtitle { font-size: 13px; color: #9ca3af; margin: 4px 0 0; }
+
+/* ── Loading ──────────────────────────────────────────── */
+.loading-state {
+  display: flex; flex-direction: column; align-items: center;
+  justify-content: center; height: 300px; gap: 16px; color: #9ca3af;
+}
+.spinner {
+  width: 40px; height: 40px;
+  border: 3px solid #e5e7eb;
+  border-top-color: #3b82f6;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ── KPI Grid ─────────────────────────────────────────── */
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+@media (max-width: 1100px) { .kpi-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 700px)  { .kpi-grid { grid-template-columns: repeat(2, 1fr); } }
+
+.kpi-card {
+  background: white;
+  border-radius: 14px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.kpi-card:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+
+.kpi-icon { font-size: 32px; }
+.kpi-number { font-size: 28px; font-weight: 800; line-height: 1; }
+.kpi-label  { font-size: 12px; color: #6b7280; margin-top: 4px; font-weight: 500; }
+
+.kpi-users      { border-left: 4px solid #6366f1; }
+.kpi-employees  { border-left: 4px solid #0ea5e9; }
+.kpi-vehicles   { border-left: 4px solid #f59e0b; }
+.kpi-missions   { border-left: 4px solid #10b981; }
+.kpi-deliveries { border-left: 4px solid #ef4444; }
+
+.kpi-users .kpi-number      { color: #6366f1; }
+.kpi-employees .kpi-number  { color: #0ea5e9; }
+.kpi-vehicles .kpi-number   { color: #f59e0b; }
+.kpi-missions .kpi-number   { color: #10b981; }
+.kpi-deliveries .kpi-number { color: #ef4444; }
+
+/* ── Charts Grid ──────────────────────────────────────── */
+.charts-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+@media (max-width: 1000px) { .charts-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 650px)  { .charts-grid { grid-template-columns: 1fr; } }
+
+.chart-card {
+  background: white;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+.chart-header {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 20px;
+}
+.chart-header h3 { font-size: 15px; font-weight: 600; color: #1f2937; margin: 0; }
+.chart-total { font-size: 12px; color: #9ca3af; font-weight: 500; }
+
+/* ── Bar Chart ────────────────────────────────────────── */
+.bar-chart { display: flex; flex-direction: column; gap: 16px; }
+.bar-item  { display: flex; align-items: center; gap: 10px; }
+.bar-label { font-size: 12px; color: #374151; width: 90px; display: flex; align-items: center; gap: 6px; }
+.bar-track {
+  flex: 1; height: 10px; background: #f3f4f6;
+  border-radius: 999px; overflow: hidden;
+}
+.bar-fill {
+  height: 100%; border-radius: 999px;
+  transition: width 0.6s ease;
+}
+.bar-green  { background: #10b981; }
+.bar-blue   { background: #3b82f6; }
+.bar-orange { background: #f97316; }
+.bar-yellow { background: #f59e0b; }
+.bar-red    { background: #ef4444; }
+.bar-value  { font-size: 13px; font-weight: 600; color: #374151; width: 20px; text-align: right; }
+
+/* ── Donut Chart ──────────────────────────────────────── */
+.donut-wrapper {
+  display: flex; align-items: center; gap: 20px;
+}
+.donut-svg { width: 120px; height: 120px; flex-shrink: 0; }
+.donut-legend { display: flex; flex-direction: column; gap: 8px; }
+.legend-item {
+  font-size: 12px; color: #374151;
+  display: flex; align-items: center; gap: 6px;
+}
+
+/* ── Dots ─────────────────────────────────────────────── */
+.dot {
+  width: 10px; height: 10px; border-radius: 50%;
+  flex-shrink: 0; display: inline-block;
+}
+.dot-green  { background: #10b981; }
+.dot-blue   { background: #3b82f6; }
+.dot-orange { background: #f97316; }
+.dot-yellow { background: #f59e0b; }
+.dot-red    { background: #ef4444; }
+
+/* ── Section Card ─────────────────────────────────────── */
+.section-card {
+  background: white;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  margin-bottom: 24px;
+}
+.section-header {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 16px;
+}
+.section-header h3 { font-size: 15px; font-weight: 600; color: #1f2937; margin: 0; }
+.btn-export {
+  padding: 6px 14px; font-size: 12px; font-weight: 500;
+  background: #f0fdf4; color: #16a34a; border: 1px solid #86efac;
+  border-radius: 8px; cursor: pointer;
+}
+.btn-export:hover { background: #dcfce7; }
+.empty-state { text-align: center; color: #9ca3af; padding: 32px; }
+
+/* ── Recent Table ─────────────────────────────────────── */
+.recent-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.recent-table th {
+  text-align: left; padding: 10px 12px;
+  font-size: 11px; font-weight: 600; color: #6b7280;
+  text-transform: uppercase; letter-spacing: 0.05em;
+  border-bottom: 1px solid #f3f4f6;
+}
+.recent-table td {
+  padding: 12px; color: #374151;
+  border-bottom: 1px solid #f9fafb;
+}
+.recent-table tr:last-child td { border-bottom: none; }
+.recent-table tr:hover td { background: #f9fafb; }
+
+.route-cell { display: flex; align-items: center; gap: 6px; }
+.route-from { font-weight: 600; color: #1f2937; }
+.route-arrow { color: #9ca3af; }
+.route-to   { color: #374151; }
+
+/* ── Status Badges ────────────────────────────────────── */
+.status-badge {
+  padding: 4px 10px; border-radius: 999px;
+  font-size: 11px; font-weight: 600;
+}
+.status-pending    { background: #fef3c7; color: #92400e; }
+.status-inprogress { background: #dbeafe; color: #1e40af; }
+.status-completed  { background: #d1fae5; color: #065f46; }
+.status-cancelled  { background: #fee2e2; color: #991b1b; }
+/* -- Monthly bar charts --------------------------------- */
+.charts-grid-2 { grid-template-columns: 1fr 1fr !important; margin-top: 24px; }
+.monthly-chart { padding: 16px 20px 8px; }
+.monthly-svg   { width: 100%; height: auto; display: block; }
+
+:host-context(html.dark) .monthly-svg text { fill: #94a3b8 !important; }

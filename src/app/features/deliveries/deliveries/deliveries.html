@@ -1,0 +1,170 @@
+<div class="page">
+
+  <!-- PAGE HEADER -->
+  <div class="page-header">
+    <div>
+      <h1>Deliveries</h1>
+      <p>Manage FreightSure delivery operations.</p>
+    </div>
+    <div class="header-actions">
+      <button class="btn-export" (click)="exportCSV()">📄 Export CSV</button>
+      <button class="btn-export" style="background:#fef3c7;color:#92400e;border-color:#fde68a" (click)="exportPdf()">📋 Export PDF</button>
+      <button type="button" class="add-button" (click)="openAddModal()">
+        <span>+</span> Add Delivery
+      </button>
+    </div>
+  </div>
+
+  <!-- STATISTICS -->
+  <div class="stats-grid">
+    <div class="stat-card">
+      <div class="stat-icon blue">📦</div>
+      <div class="stat-content"><span class="stat-label">Total</span><strong>{{ totalDeliveries }}</strong></div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon orange">⏳</div>
+      <div class="stat-content"><span class="stat-label">Pending</span><strong>{{ pendingDeliveries }}</strong></div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon green">✓</div>
+      <div class="stat-content"><span class="stat-label">Delivered</span><strong>{{ deliveredDeliveries }}</strong></div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon red">✗</div>
+      <div class="stat-content"><span class="stat-label">Cancelled</span><strong>{{ cancelledDeliveries }}</strong></div>
+    </div>
+  </div>
+
+  <!-- MAIN CARD -->
+  <div class="main-card">
+    <div class="card-header">
+      <div><h2>Delivery List</h2><p>View and manage all deliveries.</p></div>
+      <div class="filter-bar">
+        <div class="search-box">
+          <span>🔍</span>
+          <input type="text" [(ngModel)]="searchTerm" placeholder="Search deliveries..." />
+        </div>
+      </div>
+    </div>
+
+    <div class="table-container">
+      @if (isLoading) {
+        <div class="loading-state">Loading deliveries...</div>
+      } @else {
+        <table>
+          <thead>
+            <tr>
+              <th>Mission</th>
+              <th>Delivery Address</th>
+              <th>Delivery Date</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            @for (d of pagedDeliveries; track d.id) {
+              <tr>
+                <td><small>{{ getMissionLabel(d.missionId) }}</small></td>
+                <td>{{ d.adresseLivraison }}</td>
+                <td>{{ d.dateLivraison | date:'dd/MM/yyyy' }}</td>
+                <td>
+                  <span class="status-badge" [ngClass]="statusClasses[d.status]">
+                    <span class="status-dot"></span>
+                    {{ statusLabels[d.status] }}
+                  </span>
+                </td>
+                <td>
+                  <div class="actions">
+                    <button type="button" class="action-button edit" (click)="openEditModal(d)" title="Edit">✎</button>
+                    <button type="button" class="action-button delete" (click)="confirmDelete(d)" title="Delete">×</button>
+                  </div>
+                </td>
+              </tr>
+            }
+            @if (filteredDeliveries.length === 0 && !isLoading) {
+              <tr><td colspan="5"><div class="empty-state"><span>📦</span><h3>No deliveries found</h3></div></td></tr>
+            }
+          </tbody>
+        </table>
+
+        <app-pagination
+          [totalItems]="filteredDeliveries.length"
+          [pageSize]="pageSize"
+          [currentPage]="currentPage"
+          (pageChange)="onPageChange($event)"
+          (pageSizeChange)="onPageSizeChange($event)"
+        />
+      }
+    </div>
+  </div>
+
+</div>
+
+<!-- ADD / EDIT MODAL -->
+@if (showModal) {
+  <div class="modal-overlay" (click)="closeModal()">
+    <div class="modal" (click)="$event.stopPropagation()">
+      <div class="modal-header">
+        <h3>{{ isEditing ? '✎ Edit Delivery' : '+ Add Delivery' }}</h3>
+        <button type="button" class="modal-close" (click)="closeModal()">×</button>
+      </div>
+      <div class="modal-body">
+        @if (submitError) { <div class="error-banner">{{ submitError }}</div> }
+        <div class="form-group">
+          <label>Mission</label>
+          <select [(ngModel)]="form.missionId">
+            <option value="">-- Select a mission --</option>
+            @for (m of missions; track m.id) {
+              <option [ngValue]="m.id">{{ m.origine }} → {{ m.destination }}</option>
+            }
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Delivery Address</label>
+          <input type="text" [(ngModel)]="form.adresseLivraison" placeholder="12 Rue de la Paix, Tunis" />
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Delivery Date</label>
+            <input type="date" [(ngModel)]="form.dateLivraison" />
+          </div>
+          <div class="form-group">
+            <label>Status</label>
+            <select [(ngModel)]="form.status">
+              <option [ngValue]="0">Pending</option>
+              <option [ngValue]="1">Picked Up</option>
+              <option [ngValue]="2">Delivered</option>
+              <option [ngValue]="3">Cancelled</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn-cancel" (click)="closeModal()">Cancel</button>
+        <button type="button" class="btn-save" (click)="submitForm()" [disabled]="isSubmitting">
+          {{ isSubmitting ? 'Saving...' : (isEditing ? 'Update' : 'Add Delivery') }}
+        </button>
+      </div>
+    </div>
+  </div>
+}
+
+<!-- DELETE CONFIRM -->
+@if (deleteConfirmId) {
+  <div class="modal-overlay" (click)="cancelDelete()">
+    <div class="modal modal-sm" (click)="$event.stopPropagation()">
+      <div class="modal-header">
+        <h3>🗑 Delete Delivery</h3>
+        <button type="button" class="modal-close" (click)="cancelDelete()">×</button>
+      </div>
+      <div class="modal-body">
+        <p>Are you sure you want to delete delivery to <strong>{{ deleteConfirmName }}</strong>?</p>
+        <p style="margin-top:8px;font-size:12px;color:#dc2626">⚠ This action cannot be undone.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn-cancel" (click)="cancelDelete()">Cancel</button>
+        <button type="button" class="btn-delete" (click)="deleteDelivery()">Delete</button>
+      </div>
+    </div>
+  </div>
+}

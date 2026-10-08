@@ -1,0 +1,286 @@
+<div class="page">
+
+  <!-- Header -->
+  <div class="page-header">
+    <div>
+      <h1>🤖 AI Insights</h1>
+      <p>Mission Delay Predictor — TensorFlow.js Neural Network · 2-Phase Training</p>
+    </div>
+    <div class="header-actions">
+      <div class="model-status" [class.trained]="ml.isModelTrained" [class.loaded]="modelLoaded && !isTraining">
+        <span class="status-dot"></span>
+        @if (modelLoaded && !trainingDone) { 🔄 Loading... }
+        @else if (ml.isModelTrained) {
+          ✅ Model Ready · {{ ml.sampleCount }} samples · {{ (ml.modelAccuracy * 100 | number:'1.0-0') }}% accuracy
+        } @else {
+          ⚠ Model Not Trained
+        }
+      </div>
+    </div>
+  </div>
+
+  @if (isLoading) {
+    <div class="loading-state">Loading mission data...</div>
+  } @else {
+
+  <!-- Info Cards -->
+  <div class="info-grid">
+    <div class="info-card">
+      <div class="info-icon blue">📊</div>
+      <div>
+        <div class="info-label">Synthetic Dataset</div>
+        <div class="info-value">{{ ml.isModelTrained ? ml.datasetCount : 400 }}</div>
+      </div>
+      <div class="info-sub">Pre-training samples</div>
+    </div>
+    <div class="info-card">
+      <div class="info-icon green">🏭</div>
+      <div>
+        <div class="info-label">Your Real Data</div>
+        <div class="info-value">{{ labeledCount }}</div>
+      </div>
+      <div class="info-sub">Fine-tuning samples</div>
+    </div>
+    <div class="info-card">
+      <div class="info-icon purple">🧠</div>
+      <div>
+        <div class="info-label">Architecture</div>
+        <div class="info-value">6→32→16→8→1</div>
+      </div>
+      <div class="info-sub">BatchNorm + L2 Dropout</div>
+    </div>
+    <div class="info-card">
+      <div class="info-icon orange">🎯</div>
+      <div>
+        <div class="info-label">Accuracy</div>
+        <div class="info-value">
+          {{ ml.isModelTrained ? (ml.modelAccuracy * 100 | number:'1.0-0') + '%' : '—' }}
+        </div>
+      </div>
+      <div class="info-sub">After training</div>
+    </div>
+  </div>
+
+  <div class="two-col">
+
+    <!-- LEFT: TRAIN -->
+    <div class="panel">
+      <div class="panel-header">
+        <h2>🏋️ Train the Model</h2>
+        <p>2-Phase: pre-trains on <strong>400 logistics samples</strong>, then fine-tunes on your real missions.</p>
+      </div>
+      <div class="panel-body">
+
+        <!-- Training phases explanation -->
+        <div class="phases-row">
+          <div class="phase-badge" [class.active]="isTraining && trainingPhase.includes('pre')" [class.done]="trainingDone || (isTraining && !trainingPhase.includes('pre'))">
+            <div class="phase-num">1</div>
+            <div>
+              <div class="phase-title">Dataset Pre-training</div>
+              <div class="phase-sub">400 synthetic freight records · 60 epochs</div>
+            </div>
+          </div>
+          <div class="phase-arrow">→</div>
+          <div class="phase-badge" [class.active]="isTraining && !trainingPhase.includes('pre')" [class.done]="trainingDone">
+            <div class="phase-num">2</div>
+            <div>
+              <div class="phase-title">Fine-tuning</div>
+              <div class="phase-sub">Your {{ labeledCount }} real missions · up to 40 epochs</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="feature-list">
+          <div class="feature-item"><span>📅</span> Day of week + month seasonality</div>
+          <div class="feature-item"><span>⏱</span> Planned mission duration</div>
+          <div class="feature-item"><span>🚛</span> Vehicle operational status</div>
+          <div class="feature-item"><span>👤</span> Employee success rate history</div>
+          <div class="feature-item"><span>📊</span> Concurrent mission workload</div>
+        </div>
+
+        <button class="btn-train" (click)="trainModel()" [disabled]="isTraining">
+          @if (isTraining) {
+            <span class="spinner-sm"></span>
+            {{ trainingPhase.includes('pre') ? 'Phase 1/2' : 'Phase 2/2' }} — epoch {{ currentEpoch }}
+          } @else {
+            🚀 {{ ml.isModelTrained ? 'Retrain Model' : 'Train Model (Dataset + Real Data)' }}
+          }
+        </button>
+
+        <!-- Dual-phase progress bar -->
+        @if (isTraining) {
+          <div class="training-progress">
+            <div class="phase-label-row">
+              <span class="phase-tag">{{ trainingPhase }}</span>
+              <span class="phase-pct">{{ trainingProgress }}%</span>
+            </div>
+            <div class="progress-bar">
+              <!-- Phase 1 fill (blue) up to 60% -->
+              <div class="progress-fill phase1" [style.width.%]="trainingPhase.includes('pre') ? phaseProgress * 0.6 : 60"></div>
+              <!-- Phase 2 fill (green) from 60% onward -->
+              <div class="progress-fill phase2" [style.left.%]="60" [style.width.%]="trainingPhase.includes('pre') ? 0 : phaseProgress * 0.4"></div>
+            </div>
+            <div class="progress-legend">
+              <span><span class="dot-blue"></span> Phase 1: Dataset (60%)</span>
+              <span><span class="dot-green"></span> Phase 2: Fine-tune (40%)</span>
+              <span>Loss: {{ currentLoss | number:'1.4-4' }}</span>
+            </div>
+          </div>
+        }
+
+        <!-- Training result -->
+        @if (trainingDone && trainingResult) {
+          <div class="result-box">
+            <div class="result-title">
+              ✅ Training Complete!
+              @if (trainingResult.modelSaved) { <span class="save-badge">💾 Saved</span> }
+            </div>
+            <div class="result-grid">
+              <div><span>Dataset</span><strong>{{ trainingResult.datasetSamples }}</strong></div>
+              <div><span>Real Data</span><strong>{{ trainingResult.realSamples }}</strong></div>
+              <div><span>Total</span><strong>{{ trainingResult.samples }}</strong></div>
+              <div><span>Accuracy</span><strong>{{ trainingResult.accuracy * 100 | number:'1.0-0' }}%</strong></div>
+            </div>
+            <div class="model-note">
+              💾 Model saved in browser — no need to retrain on next visit!
+            </div>
+          </div>
+        }
+
+        <!-- Loaded from memory notification -->
+        @if (modelLoaded && !trainingDone) {
+          <div class="loaded-box">
+            <div>🧠 <strong>Model restored from memory</strong></div>
+            <div>Trained on <strong>{{ ml.sampleCount }}</strong> samples · accuracy <strong>{{ (ml.modelAccuracy * 100 | number:'1.0-0') }}%</strong></div>
+            <div class="loaded-sub">You can start predicting right away, or retrain to improve.</div>
+          </div>
+        }
+      </div>
+    </div>
+
+    <!-- RIGHT: PREDICT -->
+    <div class="panel">
+      <div class="panel-header">
+        <h2>🔮 Predict Mission Risk</h2>
+        <p>Select any mission and the AI analyses its delay probability.</p>
+      </div>
+      <div class="panel-body">
+
+        <div class="form-group">
+          <label>Select Mission</label>
+          <select [(ngModel)]="selectedMissionId" (change)="prediction = null">
+            <option value="">-- Choose a mission --</option>
+            <optgroup label="🕐 Pending / In Progress">
+              @for (m of pendingMissions; track m.id) {
+                <option [value]="m.id">{{ getMissionLabel(m) }}</option>
+              }
+            </optgroup>
+            <optgroup label="✓ Completed / Cancelled">
+              @for (m of completedMissions; track m.id) {
+                <option [value]="m.id">{{ getMissionLabel(m) }}</option>
+              }
+            </optgroup>
+          </select>
+        </div>
+
+        <button class="btn-predict" (click)="predict()"
+                [disabled]="!ml.isModelTrained || isPredicting || !selectedMissionId">
+          @if (isPredicting) { <span class="spinner-sm"></span> Analyzing... }
+          @else { 🔮 Predict Delay Risk }
+        </button>
+
+        @if (!ml.isModelTrained) {
+          <p class="hint">⚠ Train the model first.</p>
+        }
+        @if (predictionError) {
+          <div class="warning-box">{{ predictionError }}</div>
+        }
+
+        @if (prediction) {
+          <div class="prediction-card" [style.border-color]="prediction.riskColor">
+            <div class="pred-header" [style.background]="prediction.riskColor + '18'">
+              <span class="risk-badge" [style.background]="prediction.riskColor">
+                {{ prediction.riskLevel }} RISK
+              </span>
+              <span class="confidence">{{ (prediction.confidence * 100 | number:'1.0-0') }}% confidence</span>
+            </div>
+            <div class="prob-section">
+              <div class="prob-label">Delay Probability</div>
+              <div class="prob-bar-track">
+                <div class="prob-bar-fill"
+                     [style.width.%]="pctBar(prediction.delayProbability)"
+                     [style.background]="prediction.riskColor">
+                </div>
+              </div>
+              <div class="prob-value" [style.color]="prediction.riskColor">
+                {{ pctBar(prediction.delayProbability) }}%
+              </div>
+            </div>
+            <div class="explanation">
+              <div class="exp-title">Analysis:</div>
+              @for (line of prediction.explanation; track line) {
+                <div class="exp-line">{{ line }}</div>
+              }
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+
+  </div>
+
+  <!-- BATCH RISK SCAN -->
+  <div class="panel" style="margin-top: 24px;">
+    <div class="panel-header" style="display:flex;justify-content:space-between;align-items:center;">
+      <div>
+        <h2>🔍 Batch Risk Scan</h2>
+        <p>Scan all {{ pendingMissions.length }} active missions simultaneously.</p>
+      </div>
+      <button class="btn-batch" (click)="batchPredict()"
+              [disabled]="!ml.isModelTrained || isBatchRunning || pendingMissions.length === 0">
+        @if (isBatchRunning) { <span class="spinner-sm"></span> Scanning... }
+        @else { 🔍 Scan All Active Missions }
+      </button>
+    </div>
+
+    @if (batchResults.length > 0) {
+      <div class="batch-table">
+        <table>
+          <thead>
+            <tr>
+              <th>Mission</th>
+              <th>Risk</th>
+              <th>Delay Probability</th>
+              <th>Visual</th>
+              <th>Main Factor</th>
+            </tr>
+          </thead>
+          <tbody>
+            @for (item of batchResults; track item.mission.id) {
+              <tr>
+                <td><strong>{{ getMissionLabel(item.mission) }}</strong></td>
+                <td>
+                  <span class="risk-badge-sm" [style.background]="item.result.riskColor">
+                    {{ item.result.riskLevel }}
+                  </span>
+                </td>
+                <td><strong [style.color]="item.result.riskColor">{{ pctBar(item.result.delayProbability) }}%</strong></td>
+                <td>
+                  <div class="mini-prob-bar">
+                    <div [style.width.%]="pctBar(item.result.delayProbability)"
+                         [style.background]="item.result.riskColor"></div>
+                  </div>
+                </td>
+                <td><small>{{ item.result.explanation[0] }}</small></td>
+              </tr>
+            }
+          </tbody>
+        </table>
+      </div>
+    } @else if (!isBatchRunning) {
+      <div class="empty-state">Click "Scan All Active Missions" to see risk analysis.</div>
+    }
+  </div>
+
+  } <!-- end !isLoading -->
+</div>

@@ -1,0 +1,144 @@
+<div class="page">
+
+  <!-- PAGE HEADER -->
+  <div class="page-header">
+    <div>
+      <h1>Users</h1>
+      <p>Manage FreightSure users and their accounts.</p>
+    </div>
+    <div class="header-actions">
+      <button class="btn-export" (click)="exportCSV()">📄 Export CSV</button>
+      <button class="btn-export" style="background:#fef3c7;color:#92400e;border-color:#fde68a" (click)="exportPdf()">📋 Export PDF</button>
+    </div>
+  </div>
+
+  <!-- STATISTICS -->
+  <div class="stats-grid">
+    <div class="stat-card">
+      <div class="stat-icon blue">👥</div>
+      <div class="stat-content">
+        <span class="stat-label">Total Users</span>
+        <strong>{{ totalUsers }}</strong>
+      </div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon green">✓</div>
+      <div class="stat-content">
+        <span class="stat-label">Active</span>
+        <strong>{{ activeUsers }}</strong>
+      </div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon red">✗</div>
+      <div class="stat-content">
+        <span class="stat-label">Inactive</span>
+        <strong>{{ inactiveUsers }}</strong>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN CARD -->
+  <div class="main-card">
+    <div class="card-header">
+      <div>
+        <h2>User List</h2>
+        <p>View and manage registered users.</p>
+      </div>
+      <div class="filter-bar">
+        <div class="search-box">
+          <span>🔍</span>
+          <input type="text" [(ngModel)]="searchTerm" placeholder="Search users..." />
+        </div>
+      </div>
+    </div>
+
+    <div class="table-container">
+      @if (isLoading) {
+        <div class="loading-state">Loading users...</div>
+      } @else {
+        <table>
+          <thead>
+            <tr>
+              <th>User</th>
+              <th>Email</th>
+              <th>Phone</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            @for (user of pagedUsers; track user.id) {
+              <tr>
+                <td>
+                  <div class="user-info-cell">
+                    <div class="avatar">{{ getInitials(user.fullName) }}</div>
+                    <div>
+                      <strong>{{ user.fullName }}</strong>
+                      <small>ID #{{ user.id.substring(0,8) }}</small>
+                    </div>
+                  </div>
+                </td>
+                <td>{{ user.email }}</td>
+                <td>{{ user.phoneNumber || '—' }}</td>
+                <td>
+                  <span class="status-badge" [class.active]="user.isActive" [class.inactive]="!user.isActive">
+                    <span class="status-dot"></span>
+                    {{ user.isActive ? 'Active' : 'Inactive' }}
+                  </span>
+                </td>
+                <td>
+                  <div class="actions">
+                    <button type="button" class="action-button delete" title="Delete user" (click)="confirmDelete(user)">×</button>
+                  </div>
+                </td>
+              </tr>
+            }
+            @if (filteredUsers.length === 0 && !isLoading) {
+              <tr>
+                <td colspan="5">
+                  <div class="empty-state">
+                    <span>🔍</span>
+                    <h3>No users found</h3>
+                  </div>
+                </td>
+              </tr>
+            }
+          </tbody>
+        </table>
+
+        <app-pagination
+          [totalItems]="filteredUsers.length"
+          [pageSize]="pageSize"
+          [currentPage]="currentPage"
+          (pageChange)="onPageChange($event)"
+          (pageSizeChange)="onPageSizeChange($event)"
+        />
+      }
+    </div>
+  </div>
+
+</div>
+
+<!-- DELETE CONFIRM MODAL -->
+@if (deleteConfirmId) {
+  <div class="modal-overlay" (click)="cancelDelete()"
+       style="position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;z-index:9999">
+    <div class="modal modal-sm" (click)="$event.stopPropagation()"
+         style="position:relative;z-index:10000">
+      <div class="modal-header">
+        <h3>🗑 Delete User</h3>
+        <button type="button" class="modal-close" (click)="cancelDelete()">×</button>
+      </div>
+      <div class="modal-body">
+        <p>Are you sure you want to delete <strong>{{ deleteConfirmName }}</strong>?</p>
+        <p style="margin-top:8px;font-size:12px;color:#dc2626">⚠ This will also delete the linked employee and all their missions.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn-cancel" (click)="cancelDelete()">Cancel</button>
+        <button type="button" class="btn-delete" (click)="deleteUser()" [disabled]="isDeleting">
+          {{ isDeleting ? 'Deleting...' : 'Delete' }}
+        </button>
+      </div>
+    </div>
+  </div>
+}

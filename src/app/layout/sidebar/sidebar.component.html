@@ -1,0 +1,107 @@
+<aside class="sidebar" [class.collapsed]="isCollapsed">
+
+  <!-- TOP: Logo + Collapse button -->
+  <div class="sidebar-top">
+
+    <div class="sidebar-logo" [class.hidden]="isCollapsed">
+      <div class="logo">FS</div>
+      <div class="brand">
+        <strong>FreightSure</strong>
+        <span>Fleet Management</span>
+      </div>
+    </div>
+
+    <div class="logo-mini" [class.visible]="isCollapsed">FS</div>
+
+    <!-- Collapse toggle button -->
+    <button type="button" class="collapse-btn" (click)="toggleCollapse()" [title]="isCollapsed ? 'Expand sidebar' : 'Collapse sidebar'">
+      {{ isCollapsed ? '▶' : '◀' }}
+    </button>
+  </div>
+
+
+  <!-- NAV MENU — scrollable zone -->
+  <nav class="sidebar-nav">
+
+    <!-- MAIN -->
+    <div class="menu-section">
+      <div class="menu-title" [class.hidden]="isCollapsed">MAIN</div>
+      <a routerLink="/dashboard" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="menu-item" title="Dashboard">
+        <span class="icon">▣</span>
+        <span class="label" [class.hidden]="isCollapsed">Dashboard</span>
+      </a>
+    </div>
+
+    <!-- MANAGEMENT -->
+    <div class="menu-section">
+      <div class="menu-title" [class.hidden]="isCollapsed">MANAGEMENT</div>
+      <a routerLink="/users" routerLinkActive="active" class="menu-item" title="Users">
+        <span class="icon">👥</span><span class="label" [class.hidden]="isCollapsed">Users</span>
+      </a>
+      <a routerLink="/employees" routerLinkActive="active" class="menu-item" title="Employees">
+        <span class="icon">👤</span><span class="label" [class.hidden]="isCollapsed">Employees</span>
+      </a>
+      <a routerLink="/vehicles" routerLinkActive="active" class="menu-item" title="Vehicles">
+        <span class="icon">🚚</span><span class="label" [class.hidden]="isCollapsed">Vehicles</span>
+      </a>
+      <a routerLink="/missions" routerLinkActive="active" class="menu-item" title="Missions">
+        <span class="icon">🗺️</span><span class="label" [class.hidden]="isCollapsed">Missions</span>
+      </a>
+      <a routerLink="/deliveries" routerLinkActive="active" class="menu-item" title="Deliveries">
+        <span class="icon">📦</span><span class="label" [class.hidden]="isCollapsed">Deliveries</span>
+      </a>
+    </div>
+
+    <!-- OPERATIONS -->
+    <div class="menu-section">
+      <div class="menu-title" [class.hidden]="isCollapsed">OPERATIONS</div>
+      <a routerLink="/tracking" routerLinkActive="active" class="menu-item" title="Tracking">
+        <span class="icon">📍</span><span class="label" [class.hidden]="isCollapsed">Tracking</span>
+      </a>
+      <a routerLink="/notifications" routerLinkActive="active" class="menu-item" title="Notifications">
+        <span class="icon">🔔</span><span class="label" [class.hidden]="isCollapsed">Notifications</span>
+      </a>
+      <a routerLink="/reviews" routerLinkActive="active" class="menu-item" title="Reviews">
+        <span class="icon">⭐</span><span class="label" [class.hidden]="isCollapsed">Reviews</span>
+      </a>
+    </div>
+
+    <!-- SYSTEM -->
+    <div class="menu-section">
+      <div class="menu-title" [class.hidden]="isCollapsed">SYSTEM</div>
+      <a routerLink="/audit-logs" routerLinkActive="active" class="menu-item" title="Audit Logs">
+        <span class="icon">📋</span><span class="label" [class.hidden]="isCollapsed">Audit Logs</span>
+      </a>
+      <a routerLink="/reports" routerLinkActive="active" class="menu-item" title="Reports">
+        <span class="icon">📈</span><span class="label" [class.hidden]="isCollapsed">Reports</span>
+      </a>
+      <a routerLink="/insights" routerLinkActive="active" class="menu-item" title="AI Insights">
+        <span class="icon">🤖</span><span class="label" [class.hidden]="isCollapsed">AI Insights</span>
+      </a>
+    </div>
+
+  </nav>
+
+
+  <!-- FOOTER: User info + Logout -->
+  <div class="sidebar-footer">
+
+    @if (!isCollapsed) {
+      <div class="user-card">
+        <div class="user-avatar">{{ initials }}</div>
+        <div class="user-info">
+          <strong>{{ fullName }}</strong>
+          <span>{{ role }}</span>
+        </div>
+      </div>
+    }
+
+    <button type="button" class="logout-btn" (click)="logout()" [title]="isCollapsed ? 'Logout' : ''">
+      <span class="icon">🚪</span>
+      <span class="label" [class.hidden]="isCollapsed">Sign Out</span>
+    </button>
+
+  </div>
+
+</aside>
+
